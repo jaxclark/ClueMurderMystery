@@ -1,8 +1,3 @@
-// Jax did : 
-// npm init -y
-// npm i express
-// npm i mongoose
-
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
