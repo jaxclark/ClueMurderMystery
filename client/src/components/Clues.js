@@ -4,8 +4,7 @@ import {withClue} from '../context/ClueProvider'
 const Clues = (props) => {
     return(
         <div>
-            blah blah fuck this noise
-            {this.props.clue}
+            <h3>{props.name}</h3>
         </div>
     )
 }
