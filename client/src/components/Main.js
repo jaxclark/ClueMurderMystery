@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {withClue} from '../context/ClueProvider' 
+import Navbar from './Navbar'
 
 class Main extends Component {
     constructor(props){
@@ -22,6 +23,7 @@ class Main extends Component {
     render(){
         return(
          <div>
+             <Navbar />
              <form onSubmit={(e) => this.handleSubmit(e, this.state.name, this.state.title)}> 
                  <select onChange={this.handleChange} name='title' id="title">
                      <option value="chooseTitle">Choose Title</option>
