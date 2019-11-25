@@ -11,11 +11,11 @@ class ClueProvider extends Component {
             weapons: [],
             characters: [],
             murderWeapon: '',
-            killer: ''
+            killer: '',
+            name: '',
+            title: '',
         }
     }
-
-    
 
     getAll = () => {
     
@@ -42,7 +42,7 @@ class ClueProvider extends Component {
                     characters:res.data
                 })
             })
-        
+
     }
 
     chooseWeapon = () => {
@@ -50,21 +50,22 @@ class ClueProvider extends Component {
         this.setState({
             murderWeapon: this.state.weapons[weaponIndex]
         })}
-            
 
-            
-
+    chooseName = (name, title) => {
+        this.setState({name: name})
+        this.setState({title: title})
+    }
+    
     render() {
+        console.log(this.state.title)
+        console.log(this.state.name)
         return (
             <ClueContext.Provider
                 value = {{
-                    clues: this.state.clues,
-                    weapons: this.state.weapons,
-                    characters: this.state.characters,
+                    ...this.state,
                     getAll: this.getAll,
-                    murderWeapon: this.state.murderWeapon,
-                    killer: this.state.killer
-
+                    chooseWeapon: this.chooseWeapon,
+                    chooseName: this.chooseName
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
