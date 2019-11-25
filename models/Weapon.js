@@ -5,7 +5,9 @@ const weaponSchema = new Schema ({
     name: {
         type: String,
         required: true
-    }
+    },
+    description: String,
+    imgUrl: String
 })
 
 
