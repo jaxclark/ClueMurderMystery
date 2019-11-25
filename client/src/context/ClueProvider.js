@@ -9,18 +9,22 @@ class ClueProvider extends Component {
         this.state = {
             clues: [],
             weapons: [],
-            characters: []
+            characters: [],
+            murderWeapon: '',
+            killer: ''
         }
     }
 
     
 
     getAll = () => {
+    
         axios.get('/weapon')
             .then(res => {
                 this.setState({
-                    weapons:res.data
+                    weapons:res.data,
                 })
+                this.chooseWeapon()
             })
             .catch(err => console.log(err))
         
@@ -38,7 +42,17 @@ class ClueProvider extends Component {
                     characters:res.data
                 })
             })
+        
     }
+
+    chooseWeapon = () => {
+        const weaponIndex = Math.floor(Math.random()*(this.state.weapons.length -1))
+        this.setState({
+            murderWeapon: this.state.weapons[weaponIndex]
+        })}
+            
+
+            
 
     render() {
         return (
@@ -47,7 +61,10 @@ class ClueProvider extends Component {
                     clues: this.state.clues,
                     weapons: this.state.weapons,
                     characters: this.state.characters,
-                    getAll: this.getAll
+                    getAll: this.getAll,
+                    murderWeapon: this.state.murderWeapon,
+                    killer: this.state.killer
+
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
