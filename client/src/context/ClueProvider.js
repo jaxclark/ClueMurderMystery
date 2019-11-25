@@ -11,7 +11,7 @@ class ClueProvider extends Component {
             weapons: [],
             characters: [],
             murderWeapon: '',
-            killer: '',
+            killer: 'Mrs Peacock',
             name: '',
             title: '',
         }
@@ -55,6 +55,19 @@ class ClueProvider extends Component {
         this.setState({name: name})
         this.setState({title: title})
     }
+
+    guess = (murderer, weapon) => {
+        if (murderer === this.state.killer
+            && weapon === this.state.murderWeapon.name
+            ) {
+            // whatever needs to happen for a win
+            console.log("Player Won")
+            
+        } else {
+            console.log("Player lost")
+            // whatever needs to happen for a loss
+        }
+    }
     
     render() {
         console.log(this.state.title)
@@ -65,7 +78,8 @@ class ClueProvider extends Component {
                     ...this.state,
                     getAll: this.getAll,
                     chooseWeapon: this.chooseWeapon,
-                    chooseName: this.chooseName
+                    chooseName: this.chooseName,
+                    guess: this.guess
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
