@@ -70,11 +70,11 @@ class ClueProvider extends Component {
             
         } else {
             console.log("Player lost")
+            this.props.history.push('/gameOver')
             // whatever needs to happen for a loss
         }
     }
-
-    startAgain = () => {
+    handleRestartClick = () => {
         this.setState({
             clues: [],
             weapons: [],
@@ -86,7 +86,7 @@ class ClueProvider extends Component {
             hasWon: false
         })
         this.getAll()
-        this.props.history('/gameOver')
+        
     }
     // updateCluesList = () => {
         //not in use currently, will come in later for finding clues and adding to clues list
@@ -101,7 +101,8 @@ class ClueProvider extends Component {
                     getAll: this.getAll,
                     chooseWeapon: this.chooseWeapon,
                     chooseName: this.chooseName,
-                    guess: this.guess
+                    guess: this.guess,
+                    handleRestartClick: this.handleRestartClick
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
