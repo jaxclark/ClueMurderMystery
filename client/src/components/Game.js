@@ -14,6 +14,9 @@ class Game extends Component {
         e.preventDefault()
         this.setState({suspectName: e.target.value})
         this.props.updateClickCount()
+        if(this.props.dead === true){
+            this.props.history.push('/gameOver')
+        }
     }
 
     render() {
