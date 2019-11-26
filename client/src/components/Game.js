@@ -31,7 +31,8 @@ class Game extends Component {
 
     render() {
         return(
-            <div>{ this.state.tutorial === 'main' ?
+            <div className='gameDiv'>
+                {this.state.tutorial === 'main' ?
                 <div style={{border: '1px solid black', backgroundColor: 'lightblue', margin: '40px 0px 0px 0px'}}>
                     <h1>Would you like to read the tutorial?</h1>
                     <button onClick={this.handleTutorialToggle} value='tutorial' >Yes</button>
@@ -57,6 +58,18 @@ class Game extends Component {
 
                 </div>
                 <div>{`Interview Suspect: ${this.state.suspectName}`}</div>
+                <form className='gameForm'>
+                    <button onClick={this.handleClick} name='Miss Scarlet' value='Miss Scarlet' className='gameInterviewButton'>Miss Scarlet</button>
+                    <button onClick={this.handleClick} name='Colonel Mustard' value='Colonel Mustard' className='gameInterviewButton' >Colonel Mustard</button>
+                    <button onClick={this.handleClick} name='Mrs. White' value='Mrs. White' className='gameInterviewButton'>Mrs. White</button>
+                    <button onClick={this.handleClick} name='Mr. Green' value='Mr. Green' className='gameInterviewButton'>Mr. Green</button>
+                    <button onClick={this.handleClick} name='Mrs. Peacock' value='Mrs. Peacock' className='gameInterviewButton'>Mrs. Peacock</button>
+                    <button onClick={this.handleClick} name='Professor Plum' value='Professor Plum' className='gameInterviewButton'>Professor Plum</button>
+                </form>
+                <div className='gameClueDiv'>
+                   clue container test
+                </div>
+                <div className='gameInterviewSuspect'>{`Interview Suspect: ${this.state.suspectName}`}</div>
                 <CluesListContainer />
             </div>
         )
