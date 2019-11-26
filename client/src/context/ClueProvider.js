@@ -96,6 +96,20 @@ class ClueProvider extends Component {
 
     updateClickCount = () => {
         this.setState({clickedCount: this.state.clickedCount + 1})
+        if(this.state.clickedCount < 10) {
+            console.log('safe')
+        } else if(this.state.clickedCount >= 10 && this.state.clickedCount < 20) {
+            console.log('less safe')
+        } else if(this.state.clickedCount >= 20 && this.state.clickedCount < 30) {
+            console.log('unsafe')
+        } else if(this.state.clickedCount >= 30) {
+            console.log('dead')
+            this.clickCountDeath()
+        }
+    }
+
+    clickCountDeath = () => {
+        console.log('you have died, slowpoke')
     }
     
     render() {
