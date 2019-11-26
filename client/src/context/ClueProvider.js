@@ -14,7 +14,8 @@ class ClueProvider extends Component {
             killer: '',
             name: '',
             title: '',
-            hasWon: false
+            hasWon: false,
+            clickedCount: 0,
         }
     }
 
@@ -92,8 +93,13 @@ class ClueProvider extends Component {
         //not in use currently, will come in later for finding clues and adding to clues list
         //for now using a getAll to populate the clues list
     // }
+
+    updateClickCount = () => {
+        this.setState({clickedCount: this.state.clickedCount + 1})
+    }
     
     render() {
+        console.log(this.state.clickedCount)
         return (
             <ClueContext.Provider
                 value = {{
@@ -102,6 +108,7 @@ class ClueProvider extends Component {
                     chooseWeapon: this.chooseWeapon,
                     chooseName: this.chooseName,
                     guess: this.guess,
+                    updateClickCount: this.updateClickCount,
                     handleRestartClick: this.handleRestartClick
                 }}>
                 {this.props.children}
