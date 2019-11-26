@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import CluesListContainer from './CluesListContainer'
+import CluesListContainer from './AllCluesList'
 import { withClue } from '../context/ClueProvider'
 
 class Game extends Component {
@@ -13,6 +13,10 @@ class Game extends Component {
     handleClick = e => {
         e.preventDefault()
         this.setState({suspectName: e.target.value})
+        this.props.updateClickCount()
+        if(this.props.dead === true){
+            this.props.history.push('/gameOver')
+        }
     }
 
     render() {

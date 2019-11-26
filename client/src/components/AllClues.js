@@ -1,7 +1,7 @@
 import React from 'react'
 import {withClue} from '../context/ClueProvider'
 
-const Clues = (props) => {
+const AllClues = (props) => {
     return(
         <div>
             <h3>{props.name}</h3>
@@ -9,4 +9,4 @@ const Clues = (props) => {
     )
 }
 
-export default withClue(Clues)
+export default withClue(AllClues)

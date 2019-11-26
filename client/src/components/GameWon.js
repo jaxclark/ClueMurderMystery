@@ -2,11 +2,11 @@ import React from 'react'
 import { withClue } from '../context/ClueProvider';
 
 
-const GameOver = (props) => {
+const GameWon = (props) => {
 
     return (
         <div>
-            <h1>You Lost :(</h1>
+            <h1>YOU WIN!!!!</h1>
             <button style ={{border: '1px solid black'}} onClick={props.handleRestartClick}>
               Play Again</button>
         </div>
@@ -17,4 +17,4 @@ const GameOver = (props) => {
 
 
 
-export default withClue(GameOver)
+export default withClue(GameWon)

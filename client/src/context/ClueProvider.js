@@ -14,7 +14,9 @@ class ClueProvider extends Component {
             killer: '',
             name: '',
             title: '',
-            hasWon: false
+            hasWon: false,
+            clickedCount: 0,
+            dead: false,
         }
     }
 
@@ -70,11 +72,11 @@ class ClueProvider extends Component {
             
         } else {
             console.log("Player lost")
+            // this.props.history.push('/gameOver')
             // whatever needs to happen for a loss
         }
     }
-
-    startAgain = () => {
+    handleRestartClick = () => {
         this.setState({
             clues: [],
             weapons: [],
@@ -86,14 +88,42 @@ class ClueProvider extends Component {
             hasWon: false
         })
         this.getAll()
-        this.props.history('/gameOver')
+        
     }
     // updateCluesList = () => {
         //not in use currently, will come in later for finding clues and adding to clues list
         //for now using a getAll to populate the clues list
     // }
+
+    updateClickCount = () => {
+        this.setState({clickedCount: this.state.clickedCount + 1})
+        if(this.state.clickedCount < 7) {
+            console.log('safe')
+        } else if(this.state.clickedCount >= 7 && this.state.clickedCount < 12) {
+            let randroll = Math.floor(Math.random() * 20)
+            if(randroll === 0){
+                this.setState({dead: true})
+            }
+            console.log('rand: ', + randroll)
+            console.log('less safe')
+        } else if(this.state.clickedCount >= 12 && this.state.clickedCount < 20) {
+            let randroll = Math.floor(Math.random() * 14)
+            if(randroll === 0){
+                this.setState({dead: true})
+            }
+            console.log('rand: ', + randroll)
+            console.log('unsafe')
+        } else if(this.state.clickedCount >= 20) {
+            let randroll = Math.floor(Math.random() * 8)
+            if(randroll === 0){
+                this.setState({dead: true})
+            }
+            console.log('rand: ', + randroll)
+        }
+    }
     
     render() {
+        console.log(this.state.clickedCount)
         return (
             <ClueContext.Provider
                 value = {{
@@ -101,7 +131,9 @@ class ClueProvider extends Component {
                     getAll: this.getAll,
                     chooseWeapon: this.chooseWeapon,
                     chooseName: this.chooseName,
-                    guess: this.guess
+                    guess: this.guess,
+                    updateClickCount: this.updateClickCount,
+                    handleRestartClick: this.handleRestartClick
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
