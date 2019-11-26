@@ -11,7 +11,7 @@ class ClueProvider extends Component {
             weapons: [],
             characters: [],
             murderWeapon: '',
-            killer: 'Mrs Peacock',
+            killer: '',
             name: '',
             title: '',
         }
