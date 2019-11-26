@@ -8,6 +8,7 @@ import Game from './components/Game'
 import Accusation from './components/Accusation'
 import CharacterList from './components/CharacterList'
 import WeaponList from './components/WeaponList'
+import GameOver from './components/GameOver'
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                 <Route path='/characters' component={CharacterList} />
                 <Route path='/weapons' component={WeaponList} />
                 <Route path='/accuse-suspect' component={Accusation} />
+                <Route path='/gameOver' component={GameOver} />
             </Switch>
         </div>
     )
