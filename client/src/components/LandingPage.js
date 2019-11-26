@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {withClue} from '../context/ClueProvider' 
+import {Route, Switch} from 'react-router-dom'
 
 class LandingPage extends Component {
     constructor(props){
@@ -19,26 +20,37 @@ class LandingPage extends Component {
         const { name, value } = e.target
         this.setState({[name]: value})
     }
+    handleClick = e => {
+        e.preventDefault()
+        this.props.getAll()
+        this.props.history.push('/game')
+    }
+        //route to main page of game, call getAll function
 
     render(){
+        
         return(
-         <div>
-             <form onSubmit={(e) => this.handleSubmit(e, this.state.name, this.state.title)}> 
-                 <select onChange={this.handleChange} name='title' id="title">
-                     <option value="chooseTitle">Choose Title</option>
-                     <option value='Mr.' >Mr.</option>
-                     <option value='Mrs.' >Mrs.</option>
-                     <option value='Ms.' >Ms.</option>
-                     <option value='Doctor' >Doctor</option>
-                     <option value='Professor' >Professor</option>
-                     <option value='Reverend' >Reverend</option>
-                     <option value='Detective' >Detective</option>
-                     <option value='Inspector' >Inspector</option>
-                 </select>
-                 <input onChange={this.handleChange} value={this.state.name} name='name' type="text" placeholder="Name" />
-                 <button>Submit</button>
-             </form>
-                 <button onClick={this.props.getAll}>Bert</button>
+        <div className='landingDiv'>
+                <form onSubmit={(e) => this.handleSubmit(e, this.state.name, this.state.title)} className='landingForm'> 
+                    <h1 className='landingWelcome'>Welcome to Tudor Manor</h1>
+                    <p className='landingWelcomeExplanation'>Set up your player character and help us find the murderer:</p>
+                    <select onChange={this.handleChange} name='title' id="title" className='landingTitle'>
+                        <option value="chooseTitle">Choose Title</option>
+                        <option value='Mr.' >Mr.</option>
+                        <option value='Mrs.' >Mrs.</option>
+                        <option value='Ms.' >Ms.</option>
+                        <option value='Doctor' >Doctor</option>
+                        <option value='Professor' >Professor</option>
+                        <option value='Reverend' >Reverend</option>
+                        <option value='Detective' >Detective</option>
+                        <option value='Inspector' >Inspector</option>
+                    </select>
+                    <input onChange={this.handleChange} value={this.state.name} name='name' type="text" placeholder="Name"className='landingTitleInput' />
+                    <button className='landingTitleSubmit' >Submit</button>
+                </form>
+                <div className='startGameButtonDiv'>
+                    <button onClick={this.handleClick} className='startGameButton'>Start Game</button>
+                    </div>
          </div>
         )
     }
