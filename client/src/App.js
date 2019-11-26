@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 
 // my components
 import Navbar from './components/Navbar'
-import Main from './components/Main'
+import LandingPage from './components/LandingPage'
 import Game from './components/Game'
 import Accusation from './components/Accusation'
 import CharacterList from './components/CharacterList'
@@ -14,7 +14,7 @@ const App = () => {
         <div>
             <Navbar />
             <Switch>
-                <Route exact path='/' component={Main} />
+                <Route exact path='/' component={LandingPage} />
                 <Route path='/game' component={Game} />
                 <Route path='/characters' component={CharacterList} />
                 <Route path='/weapons' component={WeaponList} />

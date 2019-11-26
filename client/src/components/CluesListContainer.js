@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Clues from './Clues'
 import {withClue} from '../context/ClueProvider'
 
-class CluesList extends Component {
+class CluesListContainer extends Component {
     componentDidMount() {
         // this.props.updateCluesList()
         this.props.getAll()
@@ -13,11 +13,11 @@ class CluesList extends Component {
         const mappedClues = this.props.clues.map((clue) => <Clues name={clue.name}/>)
         return(
             <div>
-                <h2>Clues List:</h2>
+                <h2>Found Clues List:</h2>
                 {mappedClues}
             </div>
         )
     }
 }
 
-export default withClue(CluesList)
+export default withClue(CluesListContainer)

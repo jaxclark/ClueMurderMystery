@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import CluesList from './CluesList'
+import CluesListContainer from './CluesListContainer'
 import { withClue } from '../context/ClueProvider'
 
 class Game extends Component {
@@ -27,7 +27,7 @@ class Game extends Component {
                     <button onClick={this.handleClick} name='Professor Plum' value='Professor Plum' >Professor Plum</button>
                 </form>
                 <div>{`Interview Suspect: ${this.state.suspectName}`}</div>
-                <CluesList />
+                <CluesListContainer />
             </div>
         )
     }

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {withClue} from '../context/ClueProvider' 
 
-class Main extends Component {
+class LandingPage extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -45,4 +45,4 @@ class Main extends Component {
 }
 
 
-export default withClue(Main)
+export default withClue(LandingPage)
