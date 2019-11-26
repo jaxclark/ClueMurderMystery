@@ -20,10 +20,16 @@ class Accusation extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+        console.log(this.props.murderWeapon)
         if (this.state.murderer === '' || this.state.weapon === '') {
             (alert("You must select a murderer and a weapon to proceed"))
+        } else if (this.state.murderer === this.props.killer && this.state.weapon === this.props.murderWeapon.name) {
+            (alert("Winner"))
+            this.props.history.push('/gameWon')
         } else {
-        this.props.guess(this.state.murderer, this.stateweapon)}
+            console.log("LOSER!!!")
+            this.props.guess(this.state.murderer, this.state.weapon)
+            this.props.history.push('/gameOver')}
     }
 
     
