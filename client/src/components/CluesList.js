@@ -13,7 +13,7 @@ class CluesList extends Component {
         const mappedClues = this.props.clues.map((clue) => <Clues name={clue.name}/>)
         return(
             <div>
-                <h1>Clues List:</h1>
+                <h2>Clues List:</h2>
                 {mappedClues}
             </div>
         )

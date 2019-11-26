@@ -31,9 +31,9 @@ class Accusation extends Component {
                 <option name="murderer" value="choose">Who is the murderer?</option>
                 <option name="murderer"  value="Miss Scarlet">Miss Scarlet</option>
                 <option name="murderer" value="Colonel Mustard" >Colonel Mustard</option>
-                <option name="murderer" value="Mrs White">Mrs White</option>
+                <option name="murderer" value="Mrs. White">Mrs. White</option>
                 <option name="murderer" value="Mr. Green">Mr. Green</option>
-                <option name="murderer" value="Mrs Peacock" >Mrs Peacock</option>
+                <option name="murderer" value="Mrs. Peacock" >Mrs. Peacock</option>
             </select>
             <select name="weapon" onChange={this.handleChange} >
                 <option name="weapon" value="Choose Weapon">What was the weapon?</option>

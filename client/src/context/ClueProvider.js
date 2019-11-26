@@ -49,8 +49,10 @@ class ClueProvider extends Component {
         const weaponIndex = Math.floor(Math.random()*(this.state.weapons.length -1))
         this.setState({
             murderWeapon: this.state.weapons[weaponIndex]
-        })}
+        })
+    }
 
+    // function so player can set their title and name
     chooseName = (name, title) => {
         this.setState({name: name})
         this.setState({title: title})
@@ -69,10 +71,9 @@ class ClueProvider extends Component {
         }
     }
 
-    //not in use currently, will come in later for finding clues and adding to clues list
-    //for now using a get all clues to populate the clues list
     // updateCluesList = () => {
-
+        //not in use currently, will come in later for finding clues and adding to clues list
+        //for now using a getAll to populate the clues list
     // }
     
     render() {
