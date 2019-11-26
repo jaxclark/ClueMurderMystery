@@ -27,7 +27,7 @@ class Accusation extends Component {
             (alert("Winner"))
             this.props.history.push('/gameWon')
         } else {
-            console.log("LOSER!!!")
+            alert("LOSER!!!")
             this.props.guess(this.state.murderer, this.state.weapon)
             this.props.history.push('/gameOver')}
     }
