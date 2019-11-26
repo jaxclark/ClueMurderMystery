@@ -8,6 +8,7 @@ class ClueProvider extends Component {
         super()
         this.state = {
             clues: [],
+            foundClues: [],
             weapons: [],
             characters: [],
             murderWeapon: '',
@@ -59,6 +60,12 @@ class ClueProvider extends Component {
     chooseName = (name, title) => {
         this.setState({name: name})
         this.setState({title: title})
+    }
+
+    saveClue = (myClue) => {
+        this.setState(prevState => ({
+            foundClues:[...prevState.foundClues, myClue]
+        }))
     }
 
     guess = (murderer, weapon) => {
@@ -133,7 +140,8 @@ class ClueProvider extends Component {
                     chooseName: this.chooseName,
                     guess: this.guess,
                     updateClickCount: this.updateClickCount,
-                    handleRestartClick: this.handleRestartClick
+                    handleRestartClick: this.handleRestartClick,
+                    saveClue: this.saveClue
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
