@@ -6,7 +6,7 @@ const GameWon = (props) => {
 
     return (
         <div>
-            YOU WIN!!!!
+            <h1>YOU WIN!!!!</h1>
             <button style ={{border: '1px solid black'}} onClick={props.handleRestartClick}>
               Play Again</button>
         </div>
