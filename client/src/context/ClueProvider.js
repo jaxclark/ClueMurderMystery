@@ -8,6 +8,7 @@ class ClueProvider extends Component {
         super()
         this.state = {
             clues: [],
+            foundClues: [],
             weapons: [],
             characters: [],
             murderWeapon: '',

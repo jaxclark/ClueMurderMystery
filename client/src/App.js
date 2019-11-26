@@ -12,6 +12,7 @@ import GameOver from './components/GameOver'
 import './styles.css'
 import GameWon from './components/GameWon'
 
+
 const App = () => {
     return (
         <div>
@@ -25,6 +26,7 @@ const App = () => {
                 <Route path='/gameOver' component={GameOver} />
                 <Route path='/gameWon' component={GameWon} />
             </Switch>
+            
         </div>
     )
 }
