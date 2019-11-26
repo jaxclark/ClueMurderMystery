@@ -68,10 +68,14 @@ class ClueProvider extends Component {
             // whatever needs to happen for a loss
         }
     }
+
+    //not in use currently, will come in later for finding clues and adding to clues list
+    //for now using a get all clues to populate the clues list
+    // updateCluesList = () => {
+
+    // }
     
     render() {
-        console.log(this.state.title)
-        console.log(this.state.name)
         return (
             <ClueContext.Provider
                 value = {{

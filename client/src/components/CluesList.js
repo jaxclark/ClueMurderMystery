@@ -4,11 +4,13 @@ import {withClue} from '../context/ClueProvider'
 
 class CluesList extends Component {
     componentDidMount() {
-        this.props.updateCluesList()
+        // this.props.updateCluesList()
+        this.props.getAll()
     }
     
     render(){
-        const mappedClues = this.props.clues.map((clue) => <Clues name={clue.name} image={clue.imgUrl} />)
+        console.log(this.props.clues)
+        const mappedClues = this.props.clues.map((clue) => <Clues name={clue.name}/>)
         return(
             <div>
                 <h1>Clues List:</h1>

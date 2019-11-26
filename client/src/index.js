@@ -11,6 +11,6 @@ ReactDOM.render(
     <ClueProvider>
     <BrowserRouter>
         <App />
-    </BrowserRouter>    
+    </BrowserRouter>
     </ClueProvider>
     , document.getElementById('root'))
