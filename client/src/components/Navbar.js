@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
-import {withClue} from './ClueProvider';
+import {withClue} from '../context/ClueProvider';
 
 class Navbar extends Component {
     constructor(){
