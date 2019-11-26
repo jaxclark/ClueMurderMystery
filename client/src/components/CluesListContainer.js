@@ -9,7 +9,6 @@ class CluesListContainer extends Component {
     }
     
     render(){
-        console.log(this.props.clues)
         const mappedClues = this.props.clues.map((clue) => <Clues name={clue.name}/>)
         return(
             <div>

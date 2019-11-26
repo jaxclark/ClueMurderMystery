@@ -13,6 +13,7 @@ class Game extends Component {
     handleClick = e => {
         e.preventDefault()
         this.setState({suspectName: e.target.value})
+        this.props.updateClickCount()
     }
 
     render() {
