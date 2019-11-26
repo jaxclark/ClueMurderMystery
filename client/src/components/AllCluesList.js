@@ -5,7 +5,7 @@ import {withClue} from '../context/ClueProvider'
 class AllCluesList extends Component {
     
     render(){
-        const mappedClues = this.props.clues.map((clue) => <AllClues name={clue.name}/>)
+        const mappedClues = this.props.clues.map((clue) => <AllClues name={clue.name} className={clue.name}/>)
         return(
             <div>
                 <h2>All Clues List:</h2>

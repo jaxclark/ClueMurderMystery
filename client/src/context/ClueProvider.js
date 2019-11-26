@@ -62,6 +62,12 @@ class ClueProvider extends Component {
         this.setState({title: title})
     }
 
+    saveClue = (myClue) => {
+        this.setState(prevState => ({
+            foundClues:[...prevState.foundClues, myClue]
+        }))
+    }
+
     guess = (murderer, weapon) => {
         if (murderer === this.state.killer
             && weapon === this.state.murderWeapon.name
@@ -134,7 +140,8 @@ class ClueProvider extends Component {
                     chooseName: this.chooseName,
                     guess: this.guess,
                     updateClickCount: this.updateClickCount,
-                    handleRestartClick: this.handleRestartClick
+                    handleRestartClick: this.handleRestartClick,
+                    saveClue: this.saveClue
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
