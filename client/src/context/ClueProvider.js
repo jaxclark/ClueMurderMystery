@@ -70,7 +70,7 @@ class ClueProvider extends Component {
             
         } else {
             console.log("Player lost")
-            this.props.history.push('/gameOver')
+            // this.props.history.push('/gameOver')
             // whatever needs to happen for a loss
         }
     }
