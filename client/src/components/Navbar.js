@@ -1,17 +1,29 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import {withClue} from '../context/ClueProvider';
+import Logo from '../images/MM.png'
 
 class Navbar extends Component {
-    constructor(){
-        super()
-    }
+    // constructor(){
+    //     super()
+    // }
     render() {
+
+        let prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("Navbar").style.top = "0";
+            } else {
+                document.getElementById("Navbar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
 
         return(
             <div id='Navbar'>
                 <NavLink exact to='/' className='Navbar-link' activeClassName='Navbar-link-active'>
-                    <img src='' className='logo' alt='logo' />
+                    <img src={Logo} className='logo' alt='logo' />
                 </NavLink>
                 <NavLink to='/game' className='Navbar-link' activeClassName='Navbar-link-active'>Game</NavLink>
                 <NavLink exact to='/characters' className='Navbar-link' activeClassName='Navbar-link-active'>Characters</NavLink>
