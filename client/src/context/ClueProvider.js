@@ -17,6 +17,7 @@ class ClueProvider extends Component {
             title: '',
             hasWon: false,
             clickedCount: 0,
+            dead: false,
         }
     }
 
@@ -102,31 +103,24 @@ class ClueProvider extends Component {
         } else if(this.state.clickedCount >= 7 && this.state.clickedCount < 12) {
             let randroll = Math.floor(Math.random() * 20)
             if(randroll === 0){
-                this.clickCountDeath()
+                this.setState({dead: true})
             }
             console.log('rand: ', + randroll)
             console.log('less safe')
         } else if(this.state.clickedCount >= 12 && this.state.clickedCount < 20) {
             let randroll = Math.floor(Math.random() * 14)
             if(randroll === 0){
-                this.clickCountDeath()
+                this.setState({dead: true})
             }
             console.log('rand: ', + randroll)
             console.log('unsafe')
         } else if(this.state.clickedCount >= 20) {
             let randroll = Math.floor(Math.random() * 8)
             if(randroll === 0){
-                this.clickCountDeath()
+                this.setState({dead: true})
             }
             console.log('rand: ', + randroll)
-            console.log('dead')
         }
-    }
-
-
-
-    clickCountDeath = () => {
-        console.log('you have died, slowpoke')
     }
     
     render() {

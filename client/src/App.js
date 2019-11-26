@@ -9,6 +9,7 @@ import Accusation from './components/Accusation'
 import CharacterList from './components/CharacterList'
 import WeaponList from './components/WeaponList'
 import GameOver from './components/GameOver'
+import './styles.css'
 import GameWon from './components/GameWon'
 
 
