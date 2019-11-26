@@ -20,7 +20,10 @@ class Accusation extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        this.props.guess(this.state.murderer, this.state.weapon)
+        if (this.state.murderer === '' || this.state.weapon === '') {
+            (alert("You must select a murderer and a weapon to proceed"))
+        } else {
+        this.props.guess(this.state.murderer, this.stateweapon)}
     }
 
     
@@ -31,12 +34,12 @@ class Accusation extends Component {
                 <option name="murderer" value="choose">Who is the murderer?</option>
                 <option name="murderer"  value="Miss Scarlet">Miss Scarlet</option>
                 <option name="murderer" value="Colonel Mustard" >Colonel Mustard</option>
-                <option name="murderer" value="Mrs. White">Mrs. White</option>
+                <option name="murderer" value="Mrs White">Mrs White</option>
                 <option name="murderer" value="Mr. Green">Mr. Green</option>
-                <option name="murderer" value="Mrs. Peacock" >Mrs. Peacock</option>
+                <option name="murderer" value="Mrs Peacock" >Mrs Peacock</option>
             </select>
             <select name="weapon" onChange={this.handleChange} >
-                <option name="weapon" value="Choose Weapon">What was the weapon?</option>
+                <option name="weapon" value="choose">What was the weapon?</option>
                 <option name="weapon" value="Candlestick">Candlestick</option>
                 <option name="weapon" value="Dagger">Dagger</option>
                 <option name="weapon" value="Lead Pipe">Lead Pipe</option>

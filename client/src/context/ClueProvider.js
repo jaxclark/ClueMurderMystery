@@ -14,6 +14,7 @@ class ClueProvider extends Component {
             killer: '',
             name: '',
             title: '',
+            hasWon: false
         }
     }
 
@@ -62,7 +63,9 @@ class ClueProvider extends Component {
         if (murderer === this.state.killer
             && weapon === this.state.murderWeapon.name
             ) {
-            // whatever needs to happen for a win
+                this.setState({
+                    hasWon: true
+                })
             console.log("Player Won")
             
         } else {
@@ -71,6 +74,20 @@ class ClueProvider extends Component {
         }
     }
 
+    startAgain = () => {
+        this.setState({
+            clues: [],
+            weapons: [],
+            characters: [],
+            murderWeapon: '',
+            killer: '',
+            name: '',
+            title: '',
+            hasWon: false
+        })
+        this.getAll()
+        this.props.history('/gameOver')
+    }
     // updateCluesList = () => {
         //not in use currently, will come in later for finding clues and adding to clues list
         //for now using a getAll to populate the clues list
