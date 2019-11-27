@@ -20,22 +20,28 @@ class Accusation extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log(this.props.murderWeapon)
         if (this.state.murderer === '' || this.state.weapon === '') {
             (alert("You must select a murderer and a weapon to proceed"))
         } else if (this.state.murderer === this.props.killer && this.state.weapon === this.props.murderWeapon.name) {
             (alert("Winner"))
             this.props.history.push('/gameWon')
         } else {
-            alert("LOSER!!!")
+            console.log(this.props.lostCount)
+            if(this.props.lostCount === true){
+                this.props.history.push('/gameOver')
+            
+            } else {
+                alert("Your guess was incorrect!!!")
             this.props.guess(this.state.murderer, this.state.weapon)
-            this.props.history.push('/gameOver')}
+                } 
+        }
     }
+
 
     
     render() {
-    return (
-        <form onSubmit={this.handleSubmit} >
+        return (
+        <form onSubmit={this.handleSubmit} style={{marginTop: '100px'}}>
             <select name="murderer" onChange={this.handleChange}>
                 <option name="murderer" value="choose">Who is the murderer?</option>
                 <option name="murderer"  value="Miss Scarlet">Miss Scarlet</option>
