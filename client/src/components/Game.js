@@ -126,7 +126,9 @@ class Game extends Component {
                 <div className='gameClueDiv'>
                    {this.state.toggle1 ? 
                         <div className='gameClueDivSHOW-1' onClick={this.handleClueToggle1}>
-                            <div>SHOW INFO 1</div>
+                            <div className='gameClueTitle'>Clue 1</div>
+                            <h3 className='gameClueDescription'>Clue 1 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>  
+                            <button className='gameAddClueButton'>Add to Clue List</button>                      
                         </div>
                         :
                         <div className='gameClueDivHIDE-1' onClick={this.handleClueToggle1}>
@@ -135,7 +137,9 @@ class Game extends Component {
                     }
                     {this.state.toggle2 ? 
                         <div className='gameClueDivSHOW-2' onClick={this.handleClueToggle2}>
-                            <div>SHOW INFO 2</div>
+                            <div className='gameClueTitle'>Clue 2</div>
+                            <h3 className='gameClueDescription'>Clue 2 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
+                            <button className='gameAddClueButton'>Add to Clue List</button>
                         </div>
                         :
                         <div className='gameClueDivHIDE-2' onClick={this.handleClueToggle2}>
@@ -144,7 +148,10 @@ class Game extends Component {
                     }
                     {this.state.toggle3 ? 
                         <div className='gameClueDivSHOW-3' onClick={this.handleClueToggle3}>
-                            <div>SHOW INFO 3</div>
+                            <div className='gameClueTitle'>Clue 3</div>
+                            <h3 className='gameClueDescription'>Clue 3 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
+                            <button className='gameAddClueButton'>Add to Clue List</button>
+         
                         </div>
                         :
                         <div className='gameClueDivHIDE-3' onClick={this.handleClueToggle3}>
@@ -153,7 +160,9 @@ class Game extends Component {
                     }
                     {this.state.toggle4 ? 
                         <div className='gameClueDivSHOW-4' onClick={this.handleClueToggle4}>
-                            <div>SHOW INFO 4</div>
+                            <div className='gameClueTitle'>Clue 4</div>
+                            <h3 className='gameClueDescription'>Clue 4 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
+                            <button className='gameAddClueButton'>Add to Clue List</button>
                         </div>
                         :
                         <div className='gameClueDivHIDE-4' onClick={this.handleClueToggle4}>
@@ -162,7 +171,9 @@ class Game extends Component {
                     }
                     {this.state.toggle5 ? 
                         <div className='gameClueDivSHOW-5' onClick={this.handleClueToggle5}>
-                            <div>SHOW INFO 5</div>
+                            <div className='gameClueTitle'>Clue 5</div>
+                            <h3 className='gameClueDescription'>Clue 5 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
+                            <button className='gameAddClueButton'>Add to Clue List</button>
                         </div>
                         :
                         <div className='gameClueDivHIDE-5' onClick={this.handleClueToggle5}>
@@ -171,7 +182,9 @@ class Game extends Component {
                     }
                     {this.state.toggle6 ? 
                         <div className='gameClueDivSHOW-6' onClick={this.handleClueToggle6}>
-                            <div>SHOW INFO 6</div>
+                            <div className='gameClueTitle'>Clue 6</div>
+                            <h3 className='gameClueDescription'>Clue 6 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
+                            <button className='gameAddClueButton'>Add to Clue List</button>
                         </div>
                         :
                         <div className='gameClueDivHIDE-6' onClick={this.handleClueToggle6}>
@@ -180,7 +193,9 @@ class Game extends Component {
                     }
                     {this.state.toggle7 ? 
                         <div className='gameClueDivSHOW-7' onClick={this.handleClueToggle7}>
-                            <div>SHOW INFO 7</div>
+                            <div className='gameClueTitle'>Clue 7</div>
+                            <h3 className='gameClueDescription'>Clue 7 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
+                            <button className='gameAddClueButton'>Add to Clue List</button>
                         </div>
                         :
                         <div className='gameClueDivHIDE-7' onClick={this.handleClueToggle7}>
@@ -189,7 +204,9 @@ class Game extends Component {
                     }
                     {this.state.toggle8 ? 
                         <div className='gameClueDivSHOW-8' onClick={this.handleClueToggle8}>
-                            <div>SHOW INFO 8</div>
+                            <div className='gameClueTitle'>Clue 8</div>
+                            <h3 className='gameClueDescription'>Clue 8 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
+                            <button className='gameAddClueButton'>Add to Clue List</button>
                         </div>
                         :
                         <div className='gameClueDivHIDE-8' onClick={this.handleClueToggle8}>
@@ -198,7 +215,9 @@ class Game extends Component {
                     }
                     {this.state.toggle9 ? 
                         <div className='gameClueDivSHOW-9' onClick={this.handleClueToggle9}>
-                            <div>SHOW INFO 9</div>
+                            <div className='gameClueTitle'>Clue 9</div>
+                            <h3 className='gameClueDescription'>Clue 9 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
+                            <button className='gameAddClueButton'>Add to Clue List</button>
                         </div>
                         :
                         <div className='gameClueDivHIDE-9' onClick={this.handleClueToggle9}>
@@ -207,7 +226,9 @@ class Game extends Component {
                     }
                     {this.state.toggle10 ? 
                         <div className='gameClueDivSHOW-10' onClick={this.handleClueToggle10}>
-                            <div>SHOW INFO 10</div>
+                            <div className='gameClueTitle'>Clue 10</div>
+                            <h3 className='gameClueDescription'>Clue 10 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
+                            <button className='gameAddClueButton'>Add to Clue List</button>
                         </div>
                         :
                         <div className='gameClueDivHIDE-10' onClick={this.handleClueToggle10}>
@@ -215,7 +236,9 @@ class Game extends Component {
                         </div>   
                     }{this.state.toggle11 ? 
                         <div className='gameClueDivSHOW-11' onClick={this.handleClueToggle11}>
-                            <div>SHOW INFO 11</div>
+                            <div className='gameClueTitle'>Clue 11</div>
+                            <h3 className='gameClueDescription'>Clue 11 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
+                            <button className='gameAddClueButton'>Add to Clue List</button>
                         </div>
                         :
                         <div className='gameClueDivHIDE-11' onClick={this.handleClueToggle11}>

@@ -38,12 +38,14 @@
 
 }
 .gameClueDivSHOW-1 {
-    height: 160px;
-    width: 180px;
+    height: auto;
+    width: 200px;
     background-color: rgba(255, 0, 0, 0.493);
     position: absolute;
-    top: 315px;
-    left: 2065px;
+    top: 240px;
+    left: 2015px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-1 {
     height: 160px;
@@ -53,12 +55,14 @@
     left: 2065px;
 }
 .gameClueDivSHOW-2 {
-    height: 100px;
-    width: 100px;
-    background-color: rgba(255, 0, 0, 0.493);
+    height: auto;
+    width: 200px;
+    background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 575px;
-    left: 365px;
+    top: 500px;
+    left: 315px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-2 {
     height: 100px;
@@ -68,12 +72,14 @@
     left: 365px;
 }
 .gameClueDivSHOW-3 {
-    height: 100px;
-    width: 100px;
-    background-color: rgba(255, 0, 0, 0.493);
+    height: auto;
+    width: 200px;
+    background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 850px;
-    left: 350px;
+    top: 775px;
+    left: 300px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-3 {
     height: 100px;
@@ -83,12 +89,14 @@
     left: 350px;
 }
 .gameClueDivSHOW-4 {
-    height: 60px;
-    width: 100px;
-    background-color: rgba(255, 0, 0, 0.493);
+    height: auto;
+    width: 200px;
+    background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 575px;
-    left: 735px;
+    top: 485px;
+    left: 685px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-4 {
     height: 60px;
@@ -98,27 +106,31 @@
     left: 735px;
 }
 .gameClueDivSHOW-5 {
-    height: 100px;
-    width: 100px;
-    background-color: rgba(255, 0, 0, 0.493);
+    height: auto;
+    width: 200px;
+    background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 670px;
-    left: 745px;
+    top: 595px;
+    left: 695px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-5 {
     height: 100px;
     width: 100px;
     position: absolute;
-    top: 670px;
+    top: 660px;
     left: 745px;
 }
 .gameClueDivSHOW-6 {
-    height: 100px;
-    width: 100px;
-    background-color: rgba(255, 0, 0, 0.493);
+    height: auto;
+    width: 200px;
+    background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 600px;
-    left: 865px;
+    top: 525px;
+    left: 815px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-6 {
     height: 100px;
@@ -128,12 +140,14 @@
     left: 865px;
 }
 .gameClueDivSHOW-7 {
-    height: 80px;
-    width: 100px;
-    background-color: rgba(255, 0, 0, 0.493);
+    height: auto;
+    width: 200px;
+    background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 640px;
-    left: 1180px;
+    top: 565px;
+    left: 1130px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-7 {
     height: 80px;
@@ -143,12 +157,14 @@
     left: 1180px;
 }
 .gameClueDivSHOW-8 {
-    height: 70px;
-    width: 70px;
-    background-color: rgba(255, 0, 0, 0.493);
+    height: auto;
+    width: 200px;
+    background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 880px;
-    left: 1165px;
+    top: 805px;
+    left: 1115px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-8 {
     height: 70px;
@@ -158,12 +174,14 @@
     left: 1165px;
 }
 .gameClueDivSHOW-9 {
-    height: 70px;
-    width: 130px;
-    background-color: rgba(255, 0, 0, 0.493);
+    height: auto;
+    width: 200px;
+    background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 720px;
-    left: 2000px;
+    top: 645px;
+    left: 2950px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-9 {
     height: 70px;
@@ -173,12 +191,14 @@
     left: 2000px;
 }
 .gameClueDivSHOW-10 {
-    height: 70px;
-    width: 100px;
-    background-color: rgba(255, 0, 0, 0.493);
+    height: auto;
+    width: 200px;
+    background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 580px;
-    left: 1500px;
+    top: 505px;
+    left: 1450px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-10 {
     height: 70px;
@@ -188,12 +208,14 @@
     left: 1500px;
 }
 .gameClueDivSHOW-11 {
-    height: 60px;
-    width: 130px;
-    background-color: rgba(255, 0, 0, 0.493);
+    height: auto;
+    width: 200px;
+    background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 820px;
-    left: 2020px;
+    top: 745px;
+    left: 1970px;
+    text-align: center;
+    padding: 10px;
 }
 .gameClueDivHIDE-11 {
     height: 60px;
@@ -201,4 +223,28 @@
     position: absolute;
     top: 820px;
     left: 2020px;
+
+}
+.gameClueTitle {
+    font-family: Roboto;
+    font-weight: 600;
+    margin: 5px auto;
+    font-size: 18px;
+    text-align: center;
+}
+.gameClueDescription {
+    font-family: Montserrat;
+    font-weight: 500;
+    margin: 5px auto;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+}
+.gameAddClueButton {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px auto;
+    background: maroon;
+    font-size: 13px;
+    color: whitesmoke;
 }
