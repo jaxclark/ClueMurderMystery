@@ -12,12 +12,14 @@ class ClueProvider extends Component {
             weapons: [],
             characters: [],
             murderWeapon: '',
-            killer: '',
+            killer: 'Colonel Mustard',
             name: '',
             title: '',
             hasWon: false,
             clickedCount: 0,
             dead: false,
+            accuseCount: 2,
+            lostCount: false
         }
     }
 
@@ -78,7 +80,16 @@ class ClueProvider extends Component {
             console.log("Player Won")
             
         } else {
-            console.log("Player lost")
+            this.setState(prevState =>({
+                accuseCount: prevState.accuseCount -= 1
+            }))
+            if (this.state.accuseCount === 1) {
+               
+                this.setState({
+                    lostCount: true
+                }) 
+                
+            }
             // this.props.history.push('/gameOver')
             // whatever needs to happen for a loss
         }

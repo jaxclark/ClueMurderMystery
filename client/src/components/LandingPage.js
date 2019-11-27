@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {withClue} from '../context/ClueProvider' 
-import {Route, Switch} from 'react-router-dom'
+
 
 class LandingPage extends Component {
     constructor(props){
