@@ -1,5 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import './CSS-Stylesheets/styles.css'
+import './CSS-Stylesheets/gameStyles.css'
 
 // my components
 import Navbar from './components/Navbar'
@@ -9,7 +11,6 @@ import Accusation from './components/Accusation'
 import CharacterList from './components/CharacterList'
 import WeaponList from './components/WeaponList'
 import GameOver from './components/GameOver'
-import './styles.css'
 import GameWon from './components/GameWon'
 
 

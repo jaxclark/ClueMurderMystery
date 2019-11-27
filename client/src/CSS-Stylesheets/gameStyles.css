@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:light,regular,bold,italic|Montserrat:light,regular,bold,black,italic');
+
+.gameDiv {
+    background: url("../images/Bedroom.jpg");
+    background-size: auto;
+    background-position: center;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-repeat: no-repeat;
+    height: 1024px;
+    width: 2308px;
+    max-height: 1025px;
+}
+.gameForm {
+    margin-top: 50px;
+    width: 100vw;
+}
+.gameInterviewButton {
+    margin: 10px;
+    font-family: Montserrat;
+
+}
+.gameInterviewSuspect {
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+.gameTutorial {
+    margin: 40px 0px 0px 0px;
+    display: inline;
+    border: 1px solid black; 
+    background-color: lightblue;
+}
+.gameTutorialHeader {
+    margin: 40px 0px 0px 0px;
+
+}
