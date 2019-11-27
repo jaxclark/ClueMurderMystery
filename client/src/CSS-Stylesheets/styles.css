@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:light,regular,bold,italic|Montserrat:light,regular,bold,black,italic');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #Navbar {
     display: flex;
     position: fixed;
@@ -10,7 +16,7 @@
     background-color: grey;
     line-height: 50px;
     margin: 0;
-    transition: top 0.6s;
+    /* transition: top 0.6s; */
     z-index: 1;
 }
 .Navbar-link {
@@ -24,16 +30,20 @@
     color: maroon;
 }
 .landingDiv {
-    background: url("../images/HouseLanding.jpg");
+    background: url("../images/HouseLanding.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-position: top;
+    /* background-size: cover;
+    background-position: top; */
     background-color: grey;
     position: absolute;
     top: 0;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     height: 101vh;
     width: 100vw;
-    
+    margin: 0px;
 }
 .logo {
     height: 35px;

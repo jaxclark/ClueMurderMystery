@@ -18,7 +18,7 @@ class Game extends Component {
         if(this.props.dead === true){
             this.props.history.push('/gameOver')
         }
-        const interviewSuspect = this.props.characters.find((char => {char }))
+        // const interviewSuspect = this.props.characters.find((char => {char }))
     }
 
     handleTutorialToggle = e => {
@@ -33,8 +33,8 @@ class Game extends Component {
         return(
             <div className='gameDiv'>
                 {this.state.tutorial === 'main' ?
-                <div style={{border: '1px solid black', backgroundColor: 'lightblue', margin: '40px 0px 0px 0px'}}>
-                    <h1>Would you like to read the tutorial?</h1>
+                <div className='gameTutorial'>
+                    <h1 className='gameTutorialHeader'>Would you like to read the tutorial?</h1>
                     <button onClick={this.handleTutorialToggle} value='tutorial' >Yes</button>
                     <button onClick={this.handleTutorialToggle} value='play' >No</button>
                 </div>
@@ -54,9 +54,6 @@ class Game extends Component {
                     <button onClick={this.handleClick} name='Mrs. Peacock' value='Mrs. Peacock' >Mrs. Peacock</button>
                     <button onClick={this.handleClick} name='Professor Plum' value='Professor Plum' >Professor Plum</button>
                 </form>
-                <div>
-
-                </div>
                 <div>{`Interview Suspect: ${this.state.suspectName}`}</div>
                 <form className='gameForm'>
                     <button onClick={this.handleClick} name='Miss Scarlet' value='Miss Scarlet' className='gameInterviewButton'>Miss Scarlet</button>

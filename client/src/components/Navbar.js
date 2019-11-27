@@ -9,16 +9,16 @@ class Navbar extends Component {
     // }
     render() {
 
-        let prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        let currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("Navbar").style.top = "0";
-            } else {
-                document.getElementById("Navbar").style.top = "-50px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
+        // let prevScrollpos = window.pageYOffset;
+        // window.onscroll = function() {
+        // let currentScrollPos = window.pageYOffset;
+        //     if (prevScrollpos > currentScrollPos) {
+        //         document.getElementById("Navbar").style.top = "0";
+        //     } else {
+        //         document.getElementById("Navbar").style.top = "-50px";
+        //     }
+        //     prevScrollpos = currentScrollPos;
+        // }
 
         return(
             <div id='Navbar'>
