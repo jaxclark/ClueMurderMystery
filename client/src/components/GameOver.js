@@ -6,8 +6,13 @@ const GameOver = (props) => {
 
     return (
         <div>
-            <h1>You Lost :(</h1>
-            <button style ={{border: '1px solid black'}} onClick={props.handleRestartClick}>
+            { props.lostCount === true
+            ?
+            <h1>You lost because of accusations</h1>
+            :
+            <h1>You lost because you clicked on too many clues</h1>
+            }
+            <button onClick={props.handleRestartClick} style ={{border: '1px solid black'}} >
               Play Again</button>
         </div>
     )
