@@ -18,7 +18,7 @@ class Game extends Component {
         if(this.props.dead === true){
             this.props.history.push('/gameOver')
         }
-        const interviewSuspect = this.props.characters.find((char => {char }))
+        // const interviewSuspect = this.props.characters.find((char => {char }))
     }
 
     handleTutorialToggle = e => {
