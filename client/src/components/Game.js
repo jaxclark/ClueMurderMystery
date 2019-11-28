@@ -196,7 +196,7 @@ class Game extends Component {
                             <div className='gameClueTitle'>Clue 7</div>
                             <h3 className='gameClueDescription'>Clue 7 text. Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt.</h3>
                             <button className='gameAddClueButton'>Add to Clue List</button>
-                        </div>
+``                        </div>
                         :
                         <div className='gameClueDivHIDE-7' onClick={this.handleClueToggle7}>
                             <div>HIDE INFO 7</div>
