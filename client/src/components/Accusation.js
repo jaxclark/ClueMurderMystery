@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {withClue} from '../context/ClueProvider' 
-// import Character from './Character'
-// import Weapon from './Weapon'
+import Character from './Character'
+import Weapon from './Weapon'
 
 class Accusation extends Component {
     constructor(props) {
@@ -9,16 +9,14 @@ class Accusation extends Component {
         this.state = {
             murderer: '',
             weapon: '',
-            className:'accused'
         }
     }
         
-    handleChange = e => {
-        const { name, value } = e.target
-
+    handleChange = (type, inputName, e) => {
         this.setState ({
-            [name]: value
+            [type]: inputName
         })
+        
     }
 
     handleSubmit = (e) => {
@@ -31,6 +29,7 @@ class Accusation extends Component {
         } else {
             console.log(this.props.lostCount)
             if(this.props.lostCount === true){
+                alert('You Guessed too Many Times')
                 this.props.history.push('/gameOver')
             
             } else {
@@ -43,16 +42,20 @@ class Accusation extends Component {
 
     
     render() {
-        // const mappedCharacter = props.characters.map((character) => <Character {...character} key={character._id} onClick={this.handleChange} />)
-        // const mappedWeapon = props.weapons.map((weapon) => <Weapon {...weapon} key={weapon._id} onClick={this.handleChange}/>)
+        const mappedCharacter = this.props.characters.map((character) => <Character {...character} name={character.name} path={this.props.location.pathname} key={character._id} handleChange={this.handleChange} murderer={this.state.murderer} />)
+        const mappedWeapon = this.props.weapons.map((weapon) => <Weapon {...weapon} key={weapon._id}  path={this.props.location.pathname} weapon={this.state.weapon} handleChange={this.handleChange}/>)
 
         return (
-            <div>
-                {/* {mappedCharacter}
-                {mappedWeapon}
-                <button onClick={this.handleSubmit}>Submit accusation</button> */}
+            <div className ="accuseDiv">
+                <button className="accuseBtn" onClick={this.handleSubmit}>Submit accusation</button>
+                <div className="accusationMap">
+                    {mappedCharacter}
+                    {mappedWeapon}
+                </div>
                 
-                <form onSubmit={this.handleSubmit} style={{marginTop: '100px'}}>
+                
+                
+                {/* <form onSubmit={this.handleSubmit} style={{marginTop: '100px'}}>
                     <select name="murderer" onChange={this.handleChange}>
                     <option name="murderer" value="choose">Who is the murderer?</option>
                     <option name="murderer"  value="Miss Scarlet">Miss Scarlet</option>
@@ -70,7 +73,7 @@ class Accusation extends Component {
                     <option name="weapon" value="Rope">Rope</option>
                 </select>
                 <button>Submit Guess</button>
-            </form>
+            </form> */}
         </div>
             
     )}
