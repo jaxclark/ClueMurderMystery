@@ -8,13 +8,11 @@ class Navbar extends Component {
     // constructor(){
     //     super()
     // }
- 
 
-    componentDidMount() {
+    componentDidMount(){
         const themeSong = new Audio(song)
         themeSong.play()
-    }
-
+}
     render() {
 
         // let prevScrollpos = window.pageYOffset;

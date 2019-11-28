@@ -19,7 +19,7 @@ class ClueProvider extends Component {
             clickedCount: 0,
             dead: false,
             accuseCount: 2,
-            lostCount: false
+            lostCount: false,
         }
     }
 
@@ -90,8 +90,6 @@ class ClueProvider extends Component {
                 }) 
                 
             }
-            // this.props.history.push('/gameOver')
-            // whatever needs to happen for a loss
         }
     }
     handleRestartClick = () => {

@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import './CSS-Stylesheets/styles.css'
 import './CSS-Stylesheets/gameStyles.css'
+import './CSS-Stylesheets/accuseStyles.css'
 
 
 // my components
@@ -21,15 +22,14 @@ const App = () => {
         <div>
             <Navbar />
             <Switch>
-                <Route exact path='/' component={LandingPage} />
+                <Route exact path='/' render={rprops => <LandingPage {...rprops} />} />
                 <Route path='/game' component={Game} />
-                <Route path='/characters' component={CharacterList} />
-                <Route path='/weapons' component={WeaponList} />
-                <Route path='/accuse-suspect' component={Accusation} />
+                <Route path='/characters' render={rprops => <CharacterList {...rprops} />} />
+                <Route path='/weapons' render={rprops => <WeaponList {...rprops} />} />
+                <Route path='/accuse-suspect' render={rprops => <Accusation {...rprops} />} />
                 <Route path='/gameOver' component={GameOver} />
                 <Route path='/gameWon' component={GameWon} />
             </Switch>
-        
         </div>
     )
 }
