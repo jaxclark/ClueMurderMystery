@@ -2,11 +2,19 @@ import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import {withClue} from '../context/ClueProvider';
 import Logo from '../images/MM.png'
+import song from '../sounds/dark-winter.mp3'
 
 class Navbar extends Component {
     // constructor(){
     //     super()
     // }
+ 
+
+    componentDidMount() {
+        const themeSong = new Audio(song)
+        themeSong.play()
+    }
+
     render() {
 
         // let prevScrollpos = window.pageYOffset;
