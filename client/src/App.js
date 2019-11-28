@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import './CSS-Stylesheets/styles.css'
 import './CSS-Stylesheets/gameStyles.css'
 
+
 // my components
 import Navbar from './components/Navbar'
 import LandingPage from './components/LandingPage'
@@ -12,6 +13,7 @@ import CharacterList from './components/CharacterList'
 import WeaponList from './components/WeaponList'
 import GameOver from './components/GameOver'
 import GameWon from './components/GameWon'
+
 
 
 const App = () => {
@@ -27,7 +29,7 @@ const App = () => {
                 <Route path='/gameOver' component={GameOver} />
                 <Route path='/gameWon' component={GameWon} />
             </Switch>
-            
+        
         </div>
     )
 }
