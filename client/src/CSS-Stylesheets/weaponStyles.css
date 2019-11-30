@@ -1,0 +1,32 @@
+
+.weapons {
+    background-color: #165d30ed;
+}
+.weaponContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+    grid-gap: 60px;
+    padding-bottom: 50px;
+}
+.weapon {
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.weapon>img {
+    margin: auto;
+    width: 180px;
+}
+.particles-canvas {
+    position:fixed !important;
+    left:0;
+    top:0;
+    width:100vw;
+    height:100vh;
+    color: black;
+}

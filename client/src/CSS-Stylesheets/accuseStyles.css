@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:light,regular,bold,italic|Montserrat:light,regular,bold,black,italic');
 
-.accuseDiv {
+/* .accuseDiv {
     background-image: url("../images/Accuse.jpg");
     background-size: auto;
     background-position: center;
@@ -10,12 +10,18 @@
     left: 0px;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     max-height: 1025px;
     margin-top: 50px;
     
     
-}    
+}     */
+
+.accuseDiv {
+    background-color: #165d30ed;
+    margin-top: 50px;
+    padding: 20px;
+}
 
 .accusationMap {
     display: grid;
@@ -31,26 +37,31 @@
     padding: 10px;
     background-color: gray;
     box-shadow: #661f34 5px -5px 25px inset;
+    margin-bottom: 10px;
     
 }
 
 .accusationChar{
     background-color: gray;
     padding: 10px;
-    width: 60%;
     margin: auto;
     border-radius: 10px;
+    height: 340px;
     
+}
+.accusationChar>img {
+    width: 180px;
+    margin: auto;
 }
 .accusationWeapon {
     background-color: gray;
     padding: 10px;
-    width: 60%;
     margin: auto;
     border-radius: 10px;
+    height: 340px;
 }
 .accusationWeapon>img {
-    width: 90%;
+    width: 180px;
     margin: auto;
 }
 .selected {
@@ -59,9 +70,7 @@
 .accusedSelected {
     background-image: url('../images/Accused.jpg');
     background-size: 100% 100%;
-    /* background-color: whitesmoke; */
     padding: 10px;
-    width: 60%;
     margin: auto;
     border-radius: 10px;
     background-position: center;
@@ -70,7 +79,7 @@
     text-shadow: 4px 4px 5px #661f34;
 }
 .accusedSelected>img {
-    width: 90%;
+    width: 180px;
     margin: auto;
 }
 
