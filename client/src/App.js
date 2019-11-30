@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router-dom'
 import './CSS-Stylesheets/styles.css'
 import './CSS-Stylesheets/gameStyles.css'
 import './CSS-Stylesheets/accuseStyles.css'
+import './CSS-Stylesheets/characterStyles.css'
+import './CSS-Stylesheets/weaponStyles.css'
 
 
 // my components

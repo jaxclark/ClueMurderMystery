@@ -3,6 +3,7 @@ import {withClue} from '../context/ClueProvider'
 import Character from './Character'
 import Weapon from './Weapon'
 
+
 class Accusation extends Component {
     constructor(props) {
         super(props)
@@ -39,7 +40,6 @@ class Accusation extends Component {
         }
     }
 
-
     
     render() {
         const mappedCharacter = this.props.characters.map((character) => <Character {...character} name={character.name} path={this.props.location.pathname} key={character._id} handleChange={this.handleChange} murderer={this.state.murderer} />)
@@ -52,10 +52,7 @@ class Accusation extends Component {
                     {mappedCharacter}
                     {mappedWeapon}
                 </div>
-                
-                
-                
-                {/* <form onSubmit={this.handleSubmit} style={{marginTop: '100px'}}>
+                   {/* <form onSubmit={this.handleSubmit} style={{marginTop: '100px'}}>
                     <select name="murderer" onChange={this.handleChange}>
                     <option name="murderer" value="choose">Who is the murderer?</option>
                     <option name="murderer"  value="Miss Scarlet">Miss Scarlet</option>
@@ -74,14 +71,10 @@ class Accusation extends Component {
                 </select>
                 <button>Submit Guess</button>
             </form> */}
+             
         </div>
             
     )}
 }
-
-
-
-
-
 
 export default withClue(Accusation)
