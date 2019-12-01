@@ -5,6 +5,7 @@ import './CSS-Stylesheets/gameStyles.css'
 import './CSS-Stylesheets/accuseStyles.css'
 import './CSS-Stylesheets/characterStyles.css'
 import './CSS-Stylesheets/weaponStyles.css'
+import './CSS-Stylesheets/gameOver.css'
 
 
 // my components

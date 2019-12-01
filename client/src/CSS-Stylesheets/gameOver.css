@@ -1,0 +1,40 @@
+.gameOver {
+    background-color: #165d30ed;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.lost {
+    margin-top: 50px;
+    text-align: center;
+    animation-name: lost;
+    animation-duration: 4s;
+    color: #661f34;
+    padding-top: 50px;
+    
+}
+@keyframes lost {
+    from {font-size: 50px}
+    to {font-size: 100px}
+} 
+
+.restartBtn {
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    border-radius: 40px;
+    font-size: 30px;
+    box-shadow: #661f34 5px -5px 25px inset;
+    margin-top: 50px;
+}
+
+.wonMessage {
+    margin-top: 50px;
+    text-align: center;
+    animation-name: lost;
+    animation-duration: 4s;
+    color: #661f34;
+    padding-top: 50px;
+}
+
