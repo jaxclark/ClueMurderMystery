@@ -47,6 +47,7 @@ class Accusation extends Component {
 
         return (
             <div className ="accuseDiv">
+                <span className='triesLeft'></span>
                 <button className="accuseBtn" onClick={this.handleSubmit}>Submit accusation</button>
                 <div className="accusationMap">
                     {mappedCharacter}

@@ -10,9 +10,9 @@ class GameWon extends Component {
     }
     render() {
         return (
-            <div>
-                <h1>YOU WIN!!!!</h1>
-                <button style ={{border: '1px solid black'}} onClick={this.handleClick}>
+            <div className='gameOver'>
+                <h1 className='wonMessage'>{this.props.title} {this.props.name} solved the murder and saved the day!</h1>
+                <button className='restartBtn' style ={{border: '1px solid black'}} onClick={this.handleClick}>
                 Play Again</button>
             </div>
         )

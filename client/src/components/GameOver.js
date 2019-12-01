@@ -10,14 +10,14 @@ class GameOver extends Component {
     }
     render() {
     return (
-        <div>
+        <div className='gameOver'>
             { this.props.lostCount === true
             ?
-            <h1>You lost because of accusations</h1>
+            <h1 className='lost'>{this.props.title} {this.props.name} lost- too many wrong guesses.</h1>
             :
-            <h1>You lost because you clicked on too many clues</h1>
+            <h1 className='lost'>{this.props.title} {this.props.name} lost- you looked at too many clues!</h1>
             }
-            <button onClick={this.handleClick} style ={{border: '1px solid black'}} >
+            <button className='restartBtn' onClick={this.handleClick} style ={{border: '1px solid black'}} >
               Play Again</button>
         </div>
     )
