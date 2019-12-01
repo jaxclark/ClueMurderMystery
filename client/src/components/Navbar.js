@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import {withClue} from '../context/ClueProvider';
 import Logo from '../images/MM.png'
+import LogoWide from '../images/MM-wide.png'
+
 import song from '../sounds/dark-winter.mp3'
 
 class Navbar extends Component {
@@ -29,9 +31,9 @@ class Navbar extends Component {
         return(
             <div>
                 {this.props.murderWeapon === '' ? 
-                    <div id='Navbar'>
+                    <div id='NavbarBare'>
                         <NavLink exact to='/' className='Navbar-link' activeClassName='Navbar-link-active'>
-                            <img src={Logo} className='logo' alt='logo' />
+                            <img src={LogoWide} className='logoWide' alt='logo' />
                         </NavLink>
                     </div>
                 :

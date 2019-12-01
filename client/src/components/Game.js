@@ -125,8 +125,8 @@ class Game extends Component {
                     {this.state.tutorial === 'main' ?
                     <div className='gameTutorial'>
                         <h1 className='gameTutorialHeader'>Would you like to read the tutorial?</h1>
-                        <button onClick={this.handleTutorialToggle} value='tutorial' >Yes</button>
-                        <button onClick={this.handleTutorialToggle} value='play' >No</button>
+                        <button onClick={this.handleTutorialToggle} value='tutorial' className='gameTutorialButton'>Yes</button>
+                        <button onClick={this.handleTutorialToggle} value='play' className='gameTutorialButton'>No</button>
                     </div>
                     : this.state.tutorial === 'tutorial' ?
                     <div className='gameTutorial'>

@@ -1,23 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:light,regular,bold,italic|Montserrat:light,regular,bold,black,italic');
+
 .characterContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-top: 50px;
-    grid-gap: 60px;
-    padding-bottom: 50px;
+    /* grid-gap: 30px; */
+    padding-left: 25px;
+    padding-right: 10px;
+    padding-bottom: 100px;
     background-color: #165d30ed;
+    border: none;
 }
 .character {
-    width: 250px;
-    text-align: center;
-    background-color: antiquewhite;
-    padding: 20px;
-    margin-top: 20px;
-    margin-left: 30px;
-    border-radius: 15px;
+    margin-top: 40px;
+    border: none;
 }
 .character>img {
     margin: auto;
     width: 180px;
+}
+.charCards {
+    width: 250px;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+.charCardImage {
+    width: 225px;
+    position: relative;
+    left: -1px;
 }
 .particle-canvas {
     position:fixed !important;
@@ -26,7 +38,52 @@
     width:100%;
     height:100%;
 }
+h5 {
+    font-family: Montserrat;
+    font-size: 18px;
+    margin: 5px;
+}
+h6 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+}
+p {
+    font-family: Roboto;
+    font-size: 14px;
+    margin: 5px;
+    line-height: 1.6;
+}
+@media screen and (min-width: 800px) {
+    .characterContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .charCards {
+        width: 200px;
+    }
+    .charCardImage {
+        width: 185px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 15px;
+    }
+}
 
-
-
-
+@media screen and (min-width: 1200px) {
+    .characterContainer {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .charCards {
+        width: 150px;
+        border: none;
+    }
+    .h5 {
+        font-size: 13px 
+    }
+    .charCardImage {
+        width: 145px;
+    }
+}

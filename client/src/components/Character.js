@@ -21,21 +21,24 @@ const Character = (props) => {
         {
             myClass === 'accusationChar' || myClass === 'accusedSelected'
             ?
-            <button className = {myClass} onClick={() => handleChange('murderer', name)} style={{border: "1px solid black"}}>
-                <h5>{name}</h5>
-                <h6>{gender}</h6>
-                <h6>{age}</h6>
-                <p>{description}</p>
-                <img src={imgUrl} alt="pic"/>
+            <button className = {myClass} onClick={() => handleChange('murderer', name)}>
+                <div className='charCards'>
+                    <h5>{name}</h5>
+                    <h6>{gender}</h6>
+                    <h6>{age}</h6>
+                    <p>{description}</p>
+                    <img className='charCardImage' src={imgUrl} alt="pic"/>
+                </div>
             </button>
             :
-            <div className = {myClass} style={{border: "1px solid black"}}>
-                <img src={imgUrl} alt="pic"/>
-                <h5>{name}</h5>
-                <h6>{gender}</h6>
-                <h6>{age}</h6>
-                <p>{description}</p>
-                
+            <div className = {myClass}>
+                <div className='charCards'>
+                    <img className='charCardImage' src={imgUrl} alt="pic"/>
+                    <h5>{name}</h5>
+                    <h6>{gender}</h6>
+                    <h6>{age}</h6>
+                    <p>{description}</p>
+                </div>
             </div>
             
         }
