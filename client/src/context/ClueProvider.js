@@ -20,6 +20,7 @@ class ClueProvider extends Component {
             dead: false,
             accuseCount: 2,
             lostCount: false,
+            needTutorial: true,
         }
     }
 
@@ -142,6 +143,10 @@ class ClueProvider extends Component {
             console.log('rand: ', + randroll)
         }
     }
+
+    handleTutorial = () => {
+        this.setState({needTutorial: false})
+    }
     
     render() {
         console.log(this.state.clickedCount)
@@ -157,6 +162,7 @@ class ClueProvider extends Component {
                     guess: this.guess,
                     handleRestartClick: this.handleRestartClick,
                     updateClickCount: this.updateClickCount,
+                    handleTutorial: this.handleTutorial,
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
