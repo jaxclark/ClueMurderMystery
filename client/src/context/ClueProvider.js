@@ -58,6 +58,11 @@ class ClueProvider extends Component {
         })
     }
 
+    popWeaponFromClues = () => {
+        const newClues = this.state.clues.filter(weapon => (weapon.name !== this.state.murderWeapon.name))
+        this.setState({clues: newClues})
+    }
+
     // function so player can set their title and name
     chooseName = (name, title) => {
         this.setState({name: name})
@@ -146,11 +151,12 @@ class ClueProvider extends Component {
                     ...this.state,
                     getAll: this.getAll,
                     chooseWeapon: this.chooseWeapon,
+                    popWeaponFromClues: this.popWeaponFromClues,
                     chooseName: this.chooseName,
+                    saveClue: this.saveClue,
                     guess: this.guess,
-                    updateClickCount: this.updateClickCount,
                     handleRestartClick: this.handleRestartClick,
-                    saveClue: this.saveClue
+                    updateClickCount: this.updateClickCount,
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
