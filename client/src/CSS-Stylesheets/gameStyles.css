@@ -270,3 +270,6 @@
     font-size: 13px;
     color: whitesmoke;
 }
+.hidden {
+    display: none;
+}

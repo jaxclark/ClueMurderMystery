@@ -7,7 +7,6 @@ const AllClues = (props) => {
         // description: props.description
     }
 
-     
 
     return(
         <div>

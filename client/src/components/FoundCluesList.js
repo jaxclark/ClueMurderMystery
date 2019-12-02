@@ -11,8 +11,4 @@ const FoundCluesList = props => {
     )
 }
 
-
-
-
-
 export default withClue(FoundCluesList)
