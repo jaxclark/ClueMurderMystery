@@ -21,9 +21,11 @@ class ClueProvider extends Component {
             accuseCount: 2,
             lostCount: false,
             needTutorial: true,
+            canQuestion: false,
         }
     }
 
+    
     getAll = () => {
     
         axios.get('/weapon')
@@ -131,6 +133,7 @@ class ClueProvider extends Component {
         
     }
 
+    
     updateClickCount = () => {
         this.setState({clickedCount: this.state.clickedCount + 1})
         if(this.state.clickedCount < 7) {
@@ -161,6 +164,8 @@ class ClueProvider extends Component {
     handleTutorial = () => {
         this.setState({needTutorial: false})
     }
+
+    
     
     render() {
         console.log(this.state.clickedCount)
@@ -177,6 +182,8 @@ class ClueProvider extends Component {
                     handleRestartClick: this.handleRestartClick,
                     updateClickCount: this.updateClickCount,
                     handleTutorial: this.handleTutorial,
+                    alibi: this.alibi
+                    
                 }}>
                 {this.props.children}
             </ClueContext.Provider>

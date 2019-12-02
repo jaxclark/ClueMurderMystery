@@ -14,6 +14,7 @@ class LandingPage extends Component {
     handleSubmit = (e, name, title) => {
         e.preventDefault()
         this.props.chooseName(name, title)
+        alert('Welcome to the game!')
     }
 
     handleChange = e => {
