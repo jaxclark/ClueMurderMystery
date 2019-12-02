@@ -54,9 +54,22 @@ p {
     margin: 5px;
     line-height: 1.6;
 }
+.questionSuspectButton {
+    background-color: #c8102e;
+    border-radius: 10px;
+    color: whitesmoke;
+    padding: 5px 10px;
+    border: none;
+    font-family: Montserrat;
+    font-size: 14px;
+    margin: 10px;
+    box-shadow: #666 2px 2px 5px;
+}
+
 @media screen and (min-width: 800px) {
     .characterContainer {
         grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 200px;
     }
     .charCards {
         width: 200px;

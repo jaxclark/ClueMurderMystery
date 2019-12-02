@@ -22,6 +22,7 @@ class ClueProvider extends Component {
             lostCount: false,
             needTutorial: true,
             canQuestion: false,
+            hideClues: [false, false, false, false, false, false, false, false, false, false, false],
         }
     }
 
@@ -128,6 +129,7 @@ class ClueProvider extends Component {
             accuseCount: 2,
             lostCount: false,
             needTutorial: true,
+            hideClues: [false, false, false, false, false, false, false, false, false, false, false],
         })
         this.getAll()
         
@@ -136,16 +138,16 @@ class ClueProvider extends Component {
     
     updateClickCount = () => {
         this.setState({clickedCount: this.state.clickedCount + 1})
-        if(this.state.clickedCount < 7) {
+        if(this.state.clickedCount < 9) {
             console.log('safe')
-        } else if(this.state.clickedCount >= 7 && this.state.clickedCount < 12) {
+        } else if(this.state.clickedCount >= 9 && this.state.clickedCount < 14) {
             let randroll = Math.floor(Math.random() * 20)
             if(randroll === 0){
                 this.setState({dead: true})
             }
             console.log('rand: ', + randroll)
             console.log('less safe')
-        } else if(this.state.clickedCount >= 12 && this.state.clickedCount < 20) {
+        } else if(this.state.clickedCount >= 14 && this.state.clickedCount < 20) {
             let randroll = Math.floor(Math.random() * 14)
             if(randroll === 0){
                 this.setState({dead: true})
@@ -165,7 +167,18 @@ class ClueProvider extends Component {
         this.setState({needTutorial: false})
     }
 
-    
+    handleHideClues = (clueNum) => {
+        const currentArr = this.state.hideClues
+        // console.log(`firstArr: ${currentArr}`)
+        const isHidden = !this.state.hideClues[clueNum]
+        currentArr.splice(clueNum, 1, isHidden)
+        // console.log(`secondeArr: ${currentArr}`)
+        // console.log(`clueNum: ${clueNum}`)
+        // console.log(`isHidden: ${isHidden}`)
+        this.setState(() => ({
+            hideClues: currentArr
+        }))
+    }
     
     render() {
         console.log(this.state.clickedCount)
@@ -182,8 +195,7 @@ class ClueProvider extends Component {
                     handleRestartClick: this.handleRestartClick,
                     updateClickCount: this.updateClickCount,
                     handleTutorial: this.handleTutorial,
-                    alibi: this.alibi
-                    
+                    handleHideClues: this.handleHideClues,
                 }}>
                 {this.props.children}
             </ClueContext.Provider>

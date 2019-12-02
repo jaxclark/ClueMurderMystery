@@ -96,7 +96,8 @@
     position: absolute;
     top: 575px;
     left: 365px;
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.171);
+    border-radius: 50%;
 
 }
 .gameClueDivSHOW-3 {
@@ -104,7 +105,7 @@
     width: 175px;
     background-color: rgba(245, 245, 245, 0.788);
     position: absolute;
-    top: 775px;
+    top: 760px;
     left: 300px;
     text-align: center;
     padding: 10px;

@@ -60,6 +60,7 @@ p {
 @media screen and (min-width: 800px) {
     .weaponContainer {
         grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 200px;
     }
     .weaponCards {
         width: 200px;

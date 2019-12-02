@@ -73,17 +73,18 @@ class Character extends Component {
                     <div className = {myClass}>
                         <div className='charCards'>
                             <img className='charCardImage' src={imgUrl} alt="pic"/>
-                            <h5>{name}</h5>
-                            <h6>{gender}</h6>
-                            <h6>{age}</h6>
+                            <h5>{name}, {age}</h5>
+                            {/* <h6>{gender}</h6> */}
+                            {/* <h6>{age}</h6> */}
                             <p>{description}</p>
                             {
                                 this.state.canQuestion ?
                            
-                                <button onClick={this.question}>Question Suspect</button> 
+                                <button className = "questionSuspectButton" onClick={this.question}>Question Suspect</button> 
                                 :
                                 null
                             }
+                           
                         </div>
 
                         <div className="questionSus">
