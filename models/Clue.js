@@ -6,7 +6,8 @@ const clueSchema = new Schema ({
         type: String,
         required: true
     },
-    description: String
+    description: String,
+    character: String
 })
 
 

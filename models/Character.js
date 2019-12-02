@@ -9,7 +9,9 @@ const characterSchema = new Schema ({
     gender: String,
     age: String,
     description: String,
-    imgUrl: String
+    imgUrl: String,
+    guiltyTxt: String,
+    alibiTxt: String
 })
 
 module.exports = mongoose.model("Character", characterSchema)
