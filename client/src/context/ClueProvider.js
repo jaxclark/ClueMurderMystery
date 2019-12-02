@@ -130,10 +130,6 @@ class ClueProvider extends Component {
         this.getAll()
         
     }
-    // updateCluesList = () => {
-        //not in use currently, will come in later for finding clues and adding to clues list
-        //for now using a getAll to populate the clues list
-    // }
 
     updateClickCount = () => {
         this.setState({clickedCount: this.state.clickedCount + 1})
