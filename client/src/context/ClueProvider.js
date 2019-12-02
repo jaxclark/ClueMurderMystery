@@ -92,7 +92,7 @@ class ClueProvider extends Component {
     }
 
     guess = (murderer, weapon) => {
-        if (murderer === this.state.killer
+        if (murderer === this.state.killer.name
             && weapon === this.state.murderWeapon.name
             ) {
                 this.setState({
