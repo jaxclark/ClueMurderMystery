@@ -1,7 +1,7 @@
 import React from 'react'
 import Character from './Character'
 import {withClue} from '../context/ClueProvider'
-import Particles from './Particle'
+
 
 
 
@@ -13,7 +13,6 @@ const CharacterList = props => {
     return(
         <div className="characterContainer">
             {mappedCharacter}
-            {/* <Particles /> */}
         </div>
         
     )
