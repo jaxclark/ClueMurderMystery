@@ -6,10 +6,12 @@
     "axios": "^0.19.0",
     "react": "^16.12.0",
     "react-browser-router": "^2.1.2",
+    "react-confetti": "^5.0.1",
     "react-dom": "^16.12.0",
     "react-particles-js": "^2.7.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-use-window-size": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

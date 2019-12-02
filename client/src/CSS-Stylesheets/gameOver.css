@@ -12,7 +12,7 @@
     padding-top: 50px;
     text-shadow: 50px 50px 0px rgba(0, 0, 0, 0.363);
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);
-    font-size: 80px;
+    font-size: 100px;
 }
 .lostMessage {
     margin-top: 5px;
@@ -21,14 +21,15 @@
     animation-duration: 4s;
     color: #d1ab10;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);
+    font-size: 60px;
 }
 @keyframes lostHeader {
-    from {font-size: 80px; color: #920c22}
-    to {font-size: 125px; color: #c8102e}
+    from {font-size: 100px; color: #920c22}
+    to {font-size: 145px; color: #c8102e}
 } 
 @keyframes lostMessage {
-    from {font-size: 50px;  color: #f3dc80}
-    to {font-size: 70px;  color: #d1ab10}
+    from {font-size: 60px;  color: #f3dc80}
+    to {font-size: 80px;  color: #d1ab10}
 } 
 
 .restartBtn {
@@ -47,9 +48,10 @@
 .wonMessage {
     margin-top: 50px;
     text-align: center;
-    animation-name: lost;
+    animation-name: lostMessage;
     animation-duration: 4s;
-    color: #661f34;
+    color: #d1ab10;
     padding-top: 50px;
+    font-size: 60px;
 }
 
