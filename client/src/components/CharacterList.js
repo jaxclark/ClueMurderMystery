@@ -13,6 +13,7 @@ const CharacterList = props => {
     return(
         <div className="characterContainer">
             {mappedCharacter}
+           
         </div>
         
     )
