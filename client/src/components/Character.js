@@ -41,7 +41,7 @@ class Character extends Component {
 
 
  render() {
-    const {name, gender, age, description, imgUrl, path, handleChange, murderer, killer} = this.props
+    const {name, age, description, imgUrl, path, handleChange, murderer, killer} = this.props
     let myClass
     
         path === '/accuse-suspect'
@@ -92,7 +92,7 @@ class Character extends Component {
                                 this.props.showAlibi || this.state.showAlibi
                                 ?
                                 
-                                    name !== killer.name
+                                    name !== killer
                                     ?
                                     <h5>{this.props.alibiTxt}</h5>
                                     :
