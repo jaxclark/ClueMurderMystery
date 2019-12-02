@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { withClue } from '../context/ClueProvider';
-
+import Confetti from 'react-confetti';
 
 class GameWon extends Component {
 
@@ -12,6 +12,7 @@ class GameWon extends Component {
         return (
             <div className='gameOver'>
                 <h1 className='wonMessage'>{this.props.title} {this.props.name} solved the murder and saved the day!</h1>
+                <Confetti width='1500px' height='500px'/>
                 <button className='restartBtn' style ={{border: '1px solid black'}} onClick={this.handleClick}>
                 Play Again</button>
             </div>
