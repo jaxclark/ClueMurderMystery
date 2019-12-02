@@ -87,7 +87,7 @@
 }
 .landingTitle {
     margin: 10px;
-    padding: 5px 10px;
+    padding: 10px;
     background-color: white;
     font-family: Montserrat;
     font-size: 16px;
@@ -126,6 +126,10 @@
 }
 .landingWelcome {
     margin: 0px;
+}
+.landingWelcomeExplanation {
+    font-family: Roboto;
+    font-size: 16px;
 }
 
 @media screen and (min-width: 800px) {
