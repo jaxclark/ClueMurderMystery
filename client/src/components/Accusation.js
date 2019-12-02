@@ -25,7 +25,7 @@ class Accusation extends Component {
         e.preventDefault()
         if (this.state.murderer === '' || this.state.weapon === '') {
             (alert("You must select a murderer and a weapon to proceed"))
-        } else if (this.state.murderer === this.props.killer && this.state.weapon === this.props.murderWeapon.name) {
+        } else if (this.state.murderer === this.props.killer.name && this.state.weapon === this.props.murderWeapon.name) {
             (alert("Winner"))
             this.props.history.push('/gameWon')
         } else {
