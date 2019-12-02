@@ -13,59 +13,73 @@
     width: 100%;
     max-height: 1025px;
     margin-top: 50px;
-    
-    
 }     */
 
 .accuseDiv {
     background-color: #165d30ed;
     margin-top: 50px;
-    padding: 20px;
 }
-
+.ChooseOne {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin: 25px 0px 15px 0px;
+    color: whitesmoke;
+    background-color: black;
+    width: 100%;
+    padding: 15px;
+}
+.ChooseOne:hover {
+    color: #c8102e;
+}
 .accusationMap {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 30px;
+    padding: 15px;
 }
-
+.accuseBtnDiv {
+    text-align: center;
+}
 .accuseBtn {
     border: 1px solid black;
-    border-radius: 35px;
-    margin: auto;
-    margin-left: 45%;
+    border-radius: 20px;
+    margin: 30px auto 10px auto;
     padding: 10px;
-    background-color: gray;
-    box-shadow: #661f34 5px -5px 25px inset;
-    margin-bottom: 10px;
-    
+    background-color: #c8102e;
+    box-shadow: #60061e 5px -5px 25px inset;
+    box-shadow: #101 1px 1px 10px;
+    font-family: Roboto;
+    color: whitesmoke;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
-
 .accusationChar{
-    background-color: gray;
-    padding: 10px;
+    /* background-color: gray; */
+    /* padding: 10px; */
     margin: auto;
     border-radius: 10px;
-    height: 340px;
-    
+    height: auto;   
 }
 .accusationChar>img {
     width: 180px;
     margin: auto;
 }
 .accusationWeapon {
-    background-color: gray;
-    padding: 10px;
+    /* background-color: gray; */
+    /* padding: 10px; */
     margin: auto;
     border-radius: 10px;
-    height: 340px;
+    height: auto;
 }
 .accusationWeapon>img {
     width: 180px;
     margin: auto;
 }
 .selected {
-    box-shadow: #661f34 5px -5px 25px inset;
+    box-shadow: #070405 5px -5px 25px inset;
 }
 .accusedSelected {
     background-image: url('../images/Accused.jpg');
@@ -75,8 +89,8 @@
     border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
-    text-shadow: 4px 4px 5px #661f34;
+    color: #c8102e;
+    outline-color: #c8102e;
 }
 .accusedSelected>img {
     width: 180px;
@@ -84,3 +98,16 @@
 }
 
 
+@media screen and (min-width: 800px) {
+    .accusationMap {
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .accusationMap {
+        grid-template-columns: repeat(6, 1fr);
+        
+    }
+}

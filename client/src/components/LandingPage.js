@@ -30,7 +30,8 @@ class LandingPage extends Component {
     render(){
         
         return(
-        <div className='landingDiv'>
+        <div className='landingDivImage'>
+            <div className='landingDiv'>
                 <form onSubmit={(e) => this.handleSubmit(e, this.state.name, this.state.title)} className='landingForm'> 
                     <h1 className='landingWelcome'>Welcome to Tudor Manor</h1>
                     <p className='landingWelcomeExplanation'>Set up your player character and help us find the murderer:</p>
@@ -50,7 +51,8 @@ class LandingPage extends Component {
                 </form>
                 <div className='startGameButtonDiv'>
                     <button onClick={this.handleClick} className='startGameButton'>Start Game</button>
-                    </div>
+                </div>
+            </div>
          </div>
         )
     }

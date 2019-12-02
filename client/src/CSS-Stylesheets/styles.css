@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
 }
-
 #Navbar {
     display: flex;
     position: fixed;
@@ -13,7 +12,7 @@
     width: 100vw;
     justify-content: space-evenly;
     height: 50px;
-    background-color: grey;
+    background-color: #101;
     line-height: 50px;
     margin: 0;
     /* transition: top 0.6s; */
@@ -27,10 +26,10 @@
     font-size: 16px;
 }
 .Navbar-link-active {
-    color: maroon;
+    color: #c8102e;
 }
-.landingDiv {
-    background: url("../images/HouseLanding.jpg") no-repeat center center fixed;
+.landingDivImage {
+    background: url("../images/HouseLanding-top.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -39,9 +38,16 @@
     background-position: top; */
     background-color: grey;
     position: absolute;
-    top: 0;
+    top: 0px;
     /* background-repeat: no-repeat; */
     height: 101vh;
+    width: 100vw;
+    margin: 0px;
+}
+.landingDiv {
+    position: absolute;
+    top: 200px;
+    /* height: 101vh; */
     width: 100vw;
     margin: 0px;
 }
@@ -50,8 +56,27 @@
     width: auto;
     margin: 7.5px auto;
 }
+#NavbarBare {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    justify-content: space-evenly;
+    height: 125px;
+    background-color: #101;
+    line-height: 50px;
+    margin: 0;
+    /* transition: top 0.6s; */
+    z-index: 1;
+}
+.logoWide {
+    height: 110px;
+    width: auto;
+    margin: 7.5px auto;
+}
 .landingForm {
-    margin: 55vh auto 0px;
+    margin: 53vh auto 0px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.685);
     padding: 25px;
@@ -89,13 +114,49 @@
 .startGameButton {
     margin: auto;
     padding: 10px 20px;
-    background-color: maroon;
+    background-color: #c8102e;
     border: none;
     border-radius: 5px;
+    box-shadow: black 0px 0px 20px;
     color: white;
     font-family: Montserrat;
     font-size: 20px;
 }
 .landingWelcome {
     margin: 0px;
+}
+
+@media screen and (min-width: 800px) {
+    #NavbarBare {
+        height: 55px;
+    }
+    .logoWide {
+        height: 45px;
+        margin: 5.5px auto;
+    }
+    .landingDivImage {
+        position: absolute;
+        top: 0px;
+        height: 101%;
+        width: 100vw;
+    }
+    .landingForm {
+        margin: 38vh auto 10px;
+        font-size: 16px;
+        padding: 15px;
+    }
+    .startGameButton {
+        background-color: #c8102e;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .landingForm {
+        margin: 43vh auto 10px;
+        font-size: 16px;
+        padding: 15px;
+    }
 }

@@ -48,9 +48,19 @@ class Accusation extends Component {
         return (
             <div className ="accuseDiv">
                 <span className='triesLeft'></span>
-                <button className="accuseBtn" onClick={this.handleSubmit}>Submit accusation</button>
+                <div className='accuseBtnDiv'>
+                    <button className="accuseBtn" onClick={this.handleSubmit}>Submit accusation</button>
+                </div>
+                <div className='ChooseOne'>
+                    Select One Character Below
+                </div>
                 <div className="accusationMap">
                     {mappedCharacter}
+                </div>
+                <div className='ChooseOne'>
+                    Select One Weapon Below
+                </div>
+                <div className="accusationMap">
                     {mappedWeapon}
                 </div>
                    {/* <form onSubmit={this.handleSubmit} style={{marginTop: '100px'}}>
