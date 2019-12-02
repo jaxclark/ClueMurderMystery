@@ -21,10 +21,12 @@ class ClueProvider extends Component {
             accuseCount: 2,
             lostCount: false,
             needTutorial: true,
+            canQuestion: false,
             hideClues: [false, false, false, false, false, false, false, false, false, false, false],
         }
     }
 
+    
     getAll = () => {
     
         axios.get('/weapon')
@@ -133,6 +135,7 @@ class ClueProvider extends Component {
         
     }
 
+    
     updateClickCount = () => {
         this.setState({clickedCount: this.state.clickedCount + 1})
         if(this.state.clickedCount < 9) {

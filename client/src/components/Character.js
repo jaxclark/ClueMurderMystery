@@ -7,11 +7,11 @@ class Character extends Component {
     constructor() {
         super()
         this.state = {
-            canQuestion: false
+            canQuestion: false,
+            showAlibi: false
         }
     }
-
-    question = () => {
+    componentDidMount() {
         let filtered = this.props.foundClues.filter(ind => {
             return ind.character === this.props.name
         }) 
@@ -24,10 +24,19 @@ class Character extends Component {
         this.setState({
             canQuestion: false
         })}
+
+        
+    }
+    question = () => {
+        this.setState({
+            showAlibi: true
+        })
         this.props.updateClickCount()
         if(this.props.dead === true){
             this.props.history.push('/gameOver')
         }
+       
+       
     }
 
 
@@ -68,20 +77,28 @@ class Character extends Component {
                             {/* <h6>{gender}</h6> */}
                             {/* <h6>{age}</h6> */}
                             <p>{description}</p>
-                            <button onClick={this.question} className="questionSuspectButton">Question Suspect</button>
+                            {
+                                this.state.canQuestion ?
+                           
+                                <button className = "questionSuspectButton" onClick={this.question}>Question Suspect</button> 
+                                :
+                                null
+                            }
+                           
                         </div>
 
                         <div className="questionSus">
                             {
-                                this.state.canQuestion
+                                this.props.showAlibi || this.state.showAlibi
                                 ?
+                                
                                     name !== killer
                                     ?
                                     <h5>{this.props.alibiTxt}</h5>
                                     :
                                     <h5>{this.props.guiltyTxt}</h5>
                                 :
-                                <h5>You need to find the clue</h5>
+                                null
                                     
                             }
                         </div>
