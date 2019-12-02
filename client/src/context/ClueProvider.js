@@ -12,7 +12,7 @@ class ClueProvider extends Component {
             weapons: [],
             characters: [],
             murderWeapon: '',
-            killer: 'Colonel Mustard',
+            killer: '',
             name: '',
             title: '',
             hasWon: false,
@@ -53,9 +53,17 @@ class ClueProvider extends Component {
     }
 
     chooseWeapon = () => {
-        const weaponIndex = Math.floor(Math.random()*(this.state.weapons.length -1))
+        const weaponIndex = Math.floor(Math.random()*(this.state.weapons.length))
         this.setState({
             murderWeapon: this.state.weapons[weaponIndex]
+        })
+    }
+
+    chooseKiller = () => {
+        const killerIndex = Math.floor(Math.random()*(this.state.characters.length))
+        console.log(killerIndex)
+        this.setState({
+            killer: this.state.characters[killerIndex]
         })
     }
 
@@ -103,21 +111,23 @@ class ClueProvider extends Component {
     handleRestartClick = () => {
         this.setState({
             clues: [],
+            foundClues: [],
             weapons: [],
             characters: [],
             murderWeapon: '',
             killer: '',
             name: '',
             title: '',
-            hasWon: false
+            hasWon: false,
+            clickedCount: 0,
+            dead: false,
+            accuseCount: 2,
+            lostCount: false,
+            needTutorial: true,
         })
         this.getAll()
         
     }
-    // updateCluesList = () => {
-        //not in use currently, will come in later for finding clues and adding to clues list
-        //for now using a getAll to populate the clues list
-    // }
 
     updateClickCount = () => {
         this.setState({clickedCount: this.state.clickedCount + 1})

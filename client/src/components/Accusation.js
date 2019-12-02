@@ -10,6 +10,7 @@ class Accusation extends Component {
         this.state = {
             murderer: '',
             weapon: '',
+            count: 3
         }
     }
         
@@ -35,6 +36,9 @@ class Accusation extends Component {
             
             } else {
                 alert("Your guess was incorrect!!!")
+                this.setState(prevState => ({
+                    count: prevState.count -= 1
+                }))
             this.props.guess(this.state.murderer, this.state.weapon)
                 } 
         }
@@ -47,7 +51,7 @@ class Accusation extends Component {
 
         return (
             <div className ="accuseDiv">
-                <span className='triesLeft'></span>
+                <span className='triesLeft'>Attempts Remaining: {this.state.count}</span>
                 <div className='accuseBtnDiv'>
                     <button className="accuseBtn" onClick={this.handleSubmit}>Submit accusation</button>
                 </div>
