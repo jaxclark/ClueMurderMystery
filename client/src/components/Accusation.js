@@ -51,9 +51,9 @@ class Accusation extends Component {
 
         return (
             <div className ="accuseDiv">
-                <span className='triesLeft'>Attempts Remaining: {this.state.count}</span>
                 <div className='accuseBtnDiv'>
                     <button className="accuseBtn" onClick={this.handleSubmit}>Submit accusation</button>
+                <span className='triesLeft'>Attempts Remaining: {this.state.count}</span>
                 </div>
                 <div className='ChooseOne'>
                     Select One Character Below

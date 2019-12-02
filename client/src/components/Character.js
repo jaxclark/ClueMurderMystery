@@ -64,11 +64,11 @@ class Character extends Component {
                     <div className = {myClass}>
                         <div className='charCards'>
                             <img className='charCardImage' src={imgUrl} alt="pic"/>
-                            <h5>{name}</h5>
-                            <h6>{gender}</h6>
-                            <h6>{age}</h6>
+                            <h5>{name}, {age}</h5>
+                            {/* <h6>{gender}</h6> */}
+                            {/* <h6>{age}</h6> */}
                             <p>{description}</p>
-                            <button onClick={this.question}>Question Suspect</button>
+                            <button onClick={this.question} className="questionSuspectButton">Question Suspect</button>
                         </div>
 
                         <div className="questionSus">
