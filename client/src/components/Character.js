@@ -92,7 +92,7 @@ class Character extends Component {
                                 this.props.showAlibi || this.state.showAlibi
                                 ?
                                 
-                                    name !== killer
+                                    name !== killer.name
                                     ?
                                     <h5>{this.props.alibiTxt}</h5>
                                     :
