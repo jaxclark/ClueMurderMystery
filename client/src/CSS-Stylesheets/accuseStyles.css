@@ -33,7 +33,8 @@
     padding: 15px 0px;
 }
 .ChooseOne:hover {
-    color: #c8102e;
+    /* color: #c8102e; */
+    background-color: #c8102e;
 }
 .accusationMap {
     display: grid;
@@ -49,7 +50,7 @@
     border: 1px solid black;
     border-radius: 20px;
     margin: 30px auto 10px auto;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #c8102e;
     box-shadow: #60061e 5px -5px 25px inset;
     box-shadow: #101 1px 1px 10px;
@@ -60,25 +61,21 @@
     outline-color: #c8102e;
 }
 .accusationChar{
-    /* background-color: gray; */
-    /* padding: 10px; */
     margin: auto;
     border-radius: 10px;
     height: auto;   
 }
 .accusationChar>img {
-    width: 180px;
+    width: 160px;
     margin: auto;
 }
 .accusationWeapon {
-    /* background-color: gray; */
-    /* padding: 10px; */
     margin: auto;
     border-radius: 10px;
     height: auto;
 }
 .accusationWeapon>img {
-    width: 180px;
+    width: 160px;
     margin: auto;
 }
 .selected {
@@ -87,25 +84,20 @@
 .accusedSelected {
     /* background-image: url('../images/Accused.jpg'); */
     /* background-size: 100% 100%; */
-    padding: 10px;
+    /* padding: 10px; */
     margin: auto;
     border-radius: 10px;
     /* background-position: center; */
     background-repeat: no-repeat;
     color: #c8102e;
-    outline-color: #c8102e;
+    outline-color: whitesmoke;
+    border: 6px solid #c8102e;
 }
 .accusedSelected>img {
     width: 180px;
     margin: auto;
 }
-/* .accuseCharCards {
-    width: 250px;
-    text-align: center;
-    /* background-color: antiquewhite;
-    padding: 15px 20px;
-    border-radius: 10px;
-} */
+
 .accuseCharCardImage {
     width: 250px;
     height: auto;

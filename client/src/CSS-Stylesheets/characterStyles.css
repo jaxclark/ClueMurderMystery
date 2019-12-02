@@ -57,6 +57,7 @@ p {
 @media screen and (min-width: 800px) {
     .characterContainer {
         grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 200px;
     }
     .charCards {
         width: 200px;

@@ -63,7 +63,7 @@
     left: 0px;
     width: 100vw;
     justify-content: space-evenly;
-    height: 125px;
+    height: 75px;
     background-color: #101;
     line-height: 50px;
     margin: 0;
@@ -71,12 +71,12 @@
     z-index: 1;
 }
 .logoWide {
-    height: 110px;
+    height: 70px;
     width: auto;
     margin: 7.5px auto;
 }
 .landingForm {
-    margin: 53vh auto 0px;
+    margin: 40vh auto 0px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.685);
     padding: 25px;
@@ -84,7 +84,6 @@
     box-shadow: rgb(75, 74, 74) 3px 3px 7px;
     font-family: Montserrat;
     font-size: 16px;
-    border-radius: 5px;
 }
 .landingTitle {
     margin: 10px;
@@ -96,16 +95,19 @@
 }
 .landingTitleInput {
     margin: 10px;
-    padding: 5px;
+    padding: 2px 5px;
     font-family: Montserrat;
     font-size: 16px;
 }
 .landingTitleSubmit {
     margin: 10px;
     padding: 5px 10px;
-    background-color: white;
+    background-color: #c8102e;
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 14px;
+    border-radius: 10px;
+    color: whitesmoke;
+    border: none;
 }
 .startGameButtonDiv {
     text-align: center;
@@ -116,11 +118,11 @@
     padding: 10px 20px;
     background-color: #c8102e;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: black 0px 0px 20px;
     color: white;
     font-family: Montserrat;
-    font-size: 20px;
+    font-size: 18px;
 }
 .landingWelcome {
     margin: 0px;
