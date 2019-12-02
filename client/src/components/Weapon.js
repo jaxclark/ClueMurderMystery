@@ -4,6 +4,10 @@ import {withClue} from '../context/ClueProvider'
 const Weapon = (props) => {
 
     const {name, description, imgUrl, path, handleChange, weapon} = props
+
+    let filtered = props.foundClues.filter(ind => {
+        return ind.name === name
+    })
     let myClass
     
         path === '/accuse-suspect'
@@ -21,17 +25,28 @@ const Weapon = (props) => {
         {
             myClass === 'accusationWeapon' || myClass === 'accusedSelected'
             ?
-            <button className={myClass} onClick={() => handleChange('weapon', name)} style={{border: "1px solid black"}}>
-                <h5>{name}</h5>
-                <p>{description}</p>
-                <img src={imgUrl} alt="pic"/>
+            <button className={myClass} onClick={() => handleChange('weapon', name)} >
+                <div className='weaponCards'>
+                    <h5>{name}</h5>
+                    <p>{description}</p>
+                    <img  className='weaponCardImage' src={imgUrl} alt="pic"/>
+                </div>
             </button>
             :
-            <div className={myClass} style={{border: "1px solid black"}}>
-                <img src={imgUrl} alt="pic"/>
-                <h5>{name}</h5>
-                <p>{description}</p>
-                
+            <div className={myClass} >
+                <div className='weaponCards'>
+                    <img  className='weaponCardImage' src={imgUrl} alt="pic"/>
+                    <h5>{name}</h5>
+                    <p>{description}</p>
+                        {
+                            filtered[0]
+                            ?
+                            <h1>FOUND</h1>
+                            :
+                            null
+                        }
+                    
+                </div>
             </div>
         }
         </>

@@ -20,6 +20,7 @@ class ClueProvider extends Component {
             dead: false,
             accuseCount: 2,
             lostCount: false,
+            needTutorial: true,
         }
     }
 
@@ -58,6 +59,11 @@ class ClueProvider extends Component {
         })
     }
 
+    popWeaponFromClues = () => {
+        const newClues = this.state.clues.filter(weapon => (weapon.name !== this.state.murderWeapon.name))
+        this.setState({clues: newClues})
+    }
+
     // function so player can set their title and name
     chooseName = (name, title) => {
         this.setState({name: name})
@@ -65,9 +71,11 @@ class ClueProvider extends Component {
     }
 
     saveClue = (myClue) => {
+        
         this.setState(prevState => ({
             foundClues:[...prevState.foundClues, myClue]
         }))
+        
     }
 
     guess = (murderer, weapon) => {
@@ -137,6 +145,10 @@ class ClueProvider extends Component {
             console.log('rand: ', + randroll)
         }
     }
+
+    handleTutorial = () => {
+        this.setState({needTutorial: false})
+    }
     
     render() {
         console.log(this.state.clickedCount)
@@ -146,11 +158,13 @@ class ClueProvider extends Component {
                     ...this.state,
                     getAll: this.getAll,
                     chooseWeapon: this.chooseWeapon,
+                    popWeaponFromClues: this.popWeaponFromClues,
                     chooseName: this.chooseName,
+                    saveClue: this.saveClue,
                     guess: this.guess,
-                    updateClickCount: this.updateClickCount,
                     handleRestartClick: this.handleRestartClick,
-                    saveClue: this.saveClue
+                    updateClickCount: this.updateClickCount,
+                    handleTutorial: this.handleTutorial,
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
