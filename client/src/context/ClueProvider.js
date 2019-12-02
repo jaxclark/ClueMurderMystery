@@ -127,6 +127,7 @@ class ClueProvider extends Component {
             accuseCount: 2,
             lostCount: false,
             needTutorial: true,
+            hideClues: [false, false, false, false, false, false, false, false, false, false, false],
         })
         this.getAll()
         
