@@ -33,7 +33,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    height: 160px;
+    height: auto;
     width: 600px;
     margin-top: -55px;
     margin-left: -300px;
