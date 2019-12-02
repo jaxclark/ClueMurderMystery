@@ -18,6 +18,8 @@
 .accuseDiv {
     background-color: #165d30ed;
     margin-top: 50px;
+    width: 100%;
+    height: 100%;
 }
 .ChooseOne {
     font-family: Montserrat;
@@ -28,7 +30,7 @@
     color: whitesmoke;
     background-color: black;
     width: 100%;
-    padding: 15px;
+    padding: 15px 0px;
 }
 .ChooseOne:hover {
     color: #c8102e;
@@ -55,6 +57,7 @@
     color: whitesmoke;
     font-size: 16px;
     letter-spacing: 1px;
+    outline-color: #c8102e;
 }
 .accusationChar{
     /* background-color: gray; */
@@ -82,12 +85,12 @@
     box-shadow: #070405 5px -5px 25px inset;
 }
 .accusedSelected {
-    background-image: url('../images/Accused.jpg');
-    background-size: 100% 100%;
+    /* background-image: url('../images/Accused.jpg'); */
+    /* background-size: 100% 100%; */
     padding: 10px;
     margin: auto;
     border-radius: 10px;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     color: #c8102e;
     outline-color: #c8102e;
@@ -96,18 +99,45 @@
     width: 180px;
     margin: auto;
 }
-
+/* .accuseCharCards {
+    width: 250px;
+    text-align: center;
+    /* background-color: antiquewhite;
+    padding: 15px 20px;
+    border-radius: 10px;
+} */
+.accuseCharCardImage {
+    width: 250px;
+    height: auto;
+}
+.accuseWeaponCardImage {
+    width: 250px;
+    height: auto;
+}
 
 @media screen and (min-width: 800px) {
     .accusationMap {
-        grid-template-columns: repeat(3, 1fr);
-        
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    .accuseCharCardImage {
+        width: 250px;
+        height: auto;
+    }
+    .accuseWeaponCardImage {
+        width: 250px;
+        height: auto;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .accusationMap {
-        grid-template-columns: repeat(6, 1fr);
-        
+        grid-template-columns: repeat(6, 1fr);   
+    }.accuseCharCardImage {
+        width: 200px;
+        height: auto;
+    }
+    .accuseWeaponCardImage {
+        width: 200px;
+        height: auto;
     }
 }

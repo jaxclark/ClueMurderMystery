@@ -52,12 +52,12 @@ class Character extends Component {
                     myClass === 'accusationChar' || myClass === 'accusedSelected'
                     ?
                     <button className = {myClass} onClick={() => handleChange('murderer', name)}>
-                        <div className='charCards'>
-                            <h5>{name}</h5>
+                        <div className='accuseCharCards'>
+                            {/* <h5>{name}</h5>
                             <h6>{gender}</h6>
                             <h6>{age}</h6>
-                            <p>{description}</p>
-                            <img className='charCardImage' src={imgUrl} alt="pic"/>
+                            <p>{description}</p> */}
+                            <img className='accuseCharCardImage' src={imgUrl} alt="pic"/>
                         </div>
                     </button>
                     :
