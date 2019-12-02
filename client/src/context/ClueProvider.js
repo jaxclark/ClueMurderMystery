@@ -71,9 +71,11 @@ class ClueProvider extends Component {
     }
 
     saveClue = (myClue) => {
+        
         this.setState(prevState => ({
             foundClues:[...prevState.foundClues, myClue]
         }))
+        
     }
 
     guess = (murderer, weapon) => {

@@ -4,6 +4,10 @@ import {withClue} from '../context/ClueProvider'
 const Weapon = (props) => {
 
     const {name, description, imgUrl, path, handleChange, weapon} = props
+
+    let filtered = props.foundClues.filter(ind => {
+        return ind.name === name
+    })
     let myClass
     
         path === '/accuse-suspect'
@@ -34,6 +38,14 @@ const Weapon = (props) => {
                     <img  className='weaponCardImage' src={imgUrl} alt="pic"/>
                     <h5>{name}</h5>
                     <p>{description}</p>
+                        {
+                            filtered[0]
+                            ?
+                            <h1>FOUND</h1>
+                            :
+                            null
+                        }
+                    
                 </div>
             </div>
         }
