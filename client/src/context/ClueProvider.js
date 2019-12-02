@@ -32,6 +32,7 @@ class ClueProvider extends Component {
                     weapons:res.data,
                 })
                 this.chooseWeapon()
+                
             })
             .catch(err => console.log(err))
         
@@ -48,6 +49,7 @@ class ClueProvider extends Component {
                 this.setState({
                     characters:res.data
                 })
+                this.chooseKiller()
             })
 
     }

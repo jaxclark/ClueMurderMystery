@@ -26,10 +26,10 @@ const Weapon = (props) => {
             myClass === 'accusationWeapon' || myClass === 'accusedSelected'
             ?
             <button className={myClass} onClick={() => handleChange('weapon', name)} >
-                <div className='weaponCards'>
-                    <h5>{name}</h5>
-                    <p>{description}</p>
-                    <img  className='weaponCardImage' src={imgUrl} alt="pic"/>
+                <div className='accuseWeaponCards'>
+                    {/* <h5>{name}</h5>
+                    <p>{description}</p> */}
+                    <img  className='accuseWeaponCardImage' src={imgUrl} alt="pic"/>
                 </div>
             </button>
             :
