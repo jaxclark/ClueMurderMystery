@@ -18,7 +18,7 @@ class Character extends Component {
         {filtered[0]
         ?
         this.setState({
-            canQuestion: true
+           canQuestion: true
         })
          :
         this.setState({
