@@ -70,8 +70,8 @@ class Game extends Component {
                         this.state.tutorial === 'tutorial' 
                         ?
                         <div className='gameTutorial'>
-                            <p>{`Welcome to Clue: Murder Mystery, ${this.props.title} ${this.props.name}! A murder has happened at Tudor Manor, and it is your job to solve it. Search the murder scene for hidden clues (click around the Game page). To eliminate suspects, interview them on the Characters page after finding clues that implicate them and see if they have an alibi for the murder. The murderer kept the weapon, so you know if you find a weapon it can’t be the murder weapon. Check the Weapons page to see which weapons you’ve found. Once you’re ready to guess who the murder and weapon are, go to Make Accusation and guess! You get three guesses before the murderer takes you out! Don’t take too long to guess, or the murderer will kill you before you can accuse them!`}</p>
-                            <button onClick={this.handleTutorialToggle} value='play' >Play</button>
+                            <p className='gameTutorialText'>{`Welcome to Clue: Murder Mystery, ${this.props.title} ${this.props.name}! A murder has happened at Tudor Manor, and it is your job to solve it. Search the murder scene for hidden clues (click around the Game page). To eliminate suspects, interview them on the Characters page after finding clues that implicate them and see if they have an alibi for the murder. The murderer kept the weapon, so you know if you find a weapon it can’t be the murder weapon. Check the Weapons page to see which weapons you’ve found. Once you’re ready to guess who the murder and weapon are, go to Make Accusation and guess! You get three guesses before the murderer takes you out! Don’t take too long to guess, or the murderer will kill you before you can accuse them!`}</p>
+                            <button onClick={this.handleTutorialToggle} value='play' className='gameTutorialButton'>Play</button>
                         </div>
                         :
                         null
@@ -87,7 +87,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue1B' style={this.props.hideClues[0] ? {display: 'none'} : {}} className='gameClueDivHIDE-1' onClick={() => this.handleClueToggle(0)}>
-                                <div>HIDE INFO 1</div>
+                                <div></div> 
+                                {/* HIDE INFO 1 */}
                             </div>   
                         }
                         {
@@ -99,7 +100,8 @@ class Game extends Component {
                             </div>
                             : 
                             <div id='clue2B' style={this.props.hideClues[1] ? {display: 'none'} : {}} className='gameClueDivHIDE-2' onClick={() => this.handleClueToggle(1)}>
-                                <div>HIDE INFO 2</div>
+                                <div></div>
+                                {/* HIDE INFO 2 */}
                             </div>
                         }
                         {this.state.openClues[2] ? 
@@ -111,7 +113,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue3B' style={this.props.hideClues[2] ? {display: 'none'} : {}} className='gameClueDivHIDE-3' onClick={() => this.handleClueToggle(2)}>
-                                <div>HIDE INFO 3</div>
+                                <div></div>
+                                {/* HIDE INFO 3 */}
                             </div>   
                         }
                         {this.state.openClues[3] ? 
@@ -122,7 +125,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue4B' style={this.props.hideClues[3] ? {display: 'none'} : {}} className='gameClueDivHIDE-4' onClick={() => this.handleClueToggle(3)}>
-                                <div>HIDE INFO 4</div>
+                                <div></div>
+                                {/* HIDE INFO 4 */}
                             </div>   
                         }
                         {this.state.openClues[4] ? 
@@ -133,7 +137,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue5B' style={this.props.hideClues[4] ? {display: 'none'} : {}} className='gameClueDivHIDE-5' onClick={() => this.handleClueToggle(4)}>
-                                <div>HIDE INFO 5</div>
+                                <div></div>
+                                {/* HIDE INFO 5 */}
                             </div>   
                         }
                         {this.state.openClues[5] ? 
@@ -144,7 +149,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue6B' style={this.props.hideClues[5] ? {display: 'none'} : {}} className='gameClueDivHIDE-6' onClick={() => this.handleClueToggle(5)}>
-                                <div>HIDE INFO 6</div>
+                                <div></div>
+                                {/* HIDE INFO 6 */}
                             </div>   
                         }
                         {this.state.openClues[6] ?
@@ -155,7 +161,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue7B' style={this.props.hideClues[6] ? {display: 'none'} : {}} className='gameClueDivHIDE-7' onClick={() => this.handleClueToggle(6)}>
-                                <div>HIDE INFO 7</div>
+                                <div></div>
+                                {/* HIDE INFO 7 */}
                             </div>   
                         }
                         {this.state.openClues[7] ? 
@@ -166,7 +173,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue8B' style={this.props.hideClues[7] ? {display: 'none'} : {}} className='gameClueDivHIDE-8' onClick={() => this.handleClueToggle(7)}>
-                                <div>HIDE INFO 8</div>
+                                <div></div>
+                                {/* HIDE INFO 8 */}
                             </div>   
                         }
                         {this.state.openClues[8] ? 
@@ -177,7 +185,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue9B' style={this.props.hideClues[8] ? {display: 'none'} : {}} className='gameClueDivHIDE-9' onClick={() => this.handleClueToggle(8)}>
-                                <div>HIDE INFO 9</div>
+                                <div></div>
+                                {/* HIDE INFO 9 */}
                             </div>   
                         }
                         {this.state.openClues[9] ? 
@@ -188,7 +197,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue10B' style={this.props.hideClues[9] ? {display: 'none'} : {}} className='gameClueDivHIDE-10' onClick={() => this.handleClueToggle(9)}>
-                                <div>HIDE INFO 10</div>
+                                <div></div>
+                                {/* HIDE INFO 10 */}
                             </div>   
                         }
                         {this.state.openClues[10] ? 
@@ -199,7 +209,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue11B' style={this.props.hideClues[10] ? {display: 'none'} : {}} className='gameClueDivHIDE-11' onClick={() => this.handleClueToggle(10)}>
-                                <div>HIDE INFO 11</div>
+                                <div></div>
+                                {/* HIDE INFO 11 */}
                             </div>   
                         }
                     </div>

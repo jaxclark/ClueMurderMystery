@@ -41,7 +41,7 @@ const Weapon = (props) => {
                         {
                             filtered[0]
                             ?
-                            <h1>FOUND</h1>
+                            <div className="weaponFound">FOUND</div>
                             :
                             null
                         }
