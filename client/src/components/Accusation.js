@@ -2,7 +2,10 @@ import React, {Component} from 'react'
 import {withClue} from '../context/ClueProvider' 
 import Character from './Character'
 import Weapon from './Weapon'
+import Particles from 'react-particles-js'
+import particlesJSON from '../particlesjs-config.json'
 
+const particlesVar = particlesJSON
 
 class Accusation extends Component {
     constructor(props) {
@@ -16,8 +19,7 @@ class Accusation extends Component {
     handleChange = (type, inputName, e) => {
         this.setState ({
             [type]: inputName
-        })
-        
+        }) 
     }
 
     handleSubmit = (e) => {
@@ -35,7 +37,7 @@ class Accusation extends Component {
                 alert("Your guess was incorrect!!!")
                 this.props.tries()
             this.props.guess(this.state.murderer, this.state.weapon)
-                } 
+            } 
         }
     }
 
@@ -62,9 +64,10 @@ class Accusation extends Component {
                 <div className="accusationMap">
                     {mappedWeapon}
                 </div>
-                 
-        </div>
-            
+                <div className='particles'>
+                    <Particles params={particlesVar} />
+                </div>
+        </div>   
     )}
 }
 
