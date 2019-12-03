@@ -82,24 +82,21 @@ class Character extends Component {
                             <p>{description}</p>
                             {
                                 this.state.canQuestion ?
-                           
                                 <button className = "questionSuspectButton" onClick={this.question}>Question Suspect</button> 
                                 :
                                 null
                             }
-                           
-                        </div>
-
-                        <div className="questionSus">
+                        {/* </div>
+                        <div className="questionSus"> */}
                             {
                                 this.props.showAlibi || this.props.showCharAlibi[this.props.index]
                                 ?
                                 
                                     name !== killer.name
                                     ?
-                                    <h5>{this.props.alibiTxt}</h5>
+                                    <h5 className='suspectAlibi'>"{this.props.alibiTxt}"</h5>
                                     :
-                                    <h5>{this.props.guiltyTxt}</h5>
+                                    <h5 className='suspectGuilty'>"{this.props.guiltyTxt}"</h5>
                                 :
                                 null
                                     

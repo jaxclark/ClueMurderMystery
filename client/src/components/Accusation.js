@@ -26,7 +26,6 @@ class Accusation extends Component {
         if (this.state.murderer === '' || this.state.weapon === '') {
             (alert("You must select a murderer and a weapon to proceed"))
         } else if (this.state.murderer === this.props.killer.name && this.state.weapon === this.props.murderWeapon.name) {
-            (alert("Winner"))
             this.props.history.push('/gameWon')
         } else {
             console.log(this.props.lostCount)
@@ -56,13 +55,13 @@ class Accusation extends Component {
                 <span className='triesLeft'>Attempts Remaining: {this.state.count}</span>
                 </div>
                 <div className='ChooseOne'>
-                    Select One Character Below
+                    Select One Character
                 </div>
                 <div className="accusationMap">
                     {mappedCharacter}
                 </div>
                 <div className='ChooseOne'>
-                    Select One Weapon Below
+                    Select One Weapon
                 </div>
                 <div className="accusationMap">
                     {mappedWeapon}
