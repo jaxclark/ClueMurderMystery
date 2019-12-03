@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { withClue } from '../context/ClueProvider'
+// import ding from '../sounds/Ding.mp3'
 
 
 class Game extends Component {
@@ -28,6 +29,8 @@ class Game extends Component {
         const currentArr = this.state.openClues
         const isOpen = !this.state.openClues[clueNum]
         currentArr.splice(clueNum, 1, isOpen)
+        // const themeDing = new Audio(ding)
+        // themeDing.play()
         this.setState(() => ({
             openClues: currentArr
         }))
