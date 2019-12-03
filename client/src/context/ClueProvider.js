@@ -41,25 +41,26 @@ class ClueProvider extends Component {
                     weapons:res.data,
                 })
                 this.chooseWeapon()
-                
-            })
-            .catch(err => console.log(err))
+
+                axios.get('/clue')
+                    .then(res => {
+                        this.setState({
+                            clues:res.data
+                        })
+                        let newClues = this.state.clues
+                        .map((a) => ({sort: Math.random(), value: a}))
+                        .sort((a, b) => a.sort - b.sort)
+                        .map((a) => a.value)
+                        this.setState({
+                            clues:newClues
+                        })
+                        this.popWeaponFromClues()
+                    })
+                    .catch(err => console.log(err))
+                    })
+                    .catch(err => console.log(err))
         
-        axios.get('/clue')
-            .then(res => {
-                this.setState({
-                    clues:res.data
-                })
-                let newClues = this.state.clues
-                .map((a) => ({sort: Math.random(), value: a}))
-                .sort((a, b) => a.sort - b.sort)
-                .map((a) => a.value)
-                this.setState({
-                    clues:newClues
-                })
-            })
-            
-            .catch(err => console.log(err))
+        
         
         axios.get('/character')
             .then(res => {
@@ -76,6 +77,7 @@ class ClueProvider extends Component {
         this.setState({
             murderWeapon: this.state.weapons[weaponIndex]
         })
+        
     }
 
 
@@ -89,7 +91,9 @@ class ClueProvider extends Component {
 
     popWeaponFromClues = () => {
         const newClues = this.state.clues.filter(weapon => (weapon.name !== this.state.murderWeapon.name))
+        console.log(this.state.murderWeapon.name)
         this.setState({clues: newClues})
+        console.log(this.state.murderWeapon.name, newClues)
     }
 
     
@@ -148,7 +152,8 @@ class ClueProvider extends Component {
             needTutorial: true,
             canQuestion: false,
             hideClues: [false, false, false, false, false, false, false, false, false, false, false],
-            showCharAlibi: [false, false, false, false, false, false]
+            showCharAlibi: [false, false, false, false, false, false],
+            attempts: 3
         })
         this.getAll()
         
@@ -218,7 +223,6 @@ class ClueProvider extends Component {
                     ...this.state,
                     getAll: this.getAll,
                     chooseWeapon: this.chooseWeapon,
-                    popWeaponFromClues: this.popWeaponFromClues,
                     chooseName: this.chooseName,
                     saveClue: this.saveClue,
                     guess: this.guess,

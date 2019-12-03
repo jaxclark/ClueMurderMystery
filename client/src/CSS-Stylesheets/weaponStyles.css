@@ -67,7 +67,7 @@ p {
     font-weight: 600;
     color: #c8102e;
     position: relative;
-    top: -275px;
+    top: -300px;
     left: -10px;
     -ms-transform: rotate(-20deg);
     -webkit-transform: rotate(-20deg);
@@ -117,7 +117,7 @@ p {
     }
     .weaponFound {
         font-size: 45px;
-        top: -215px;
+        top: -235px;
         left: -10px;
     }
 }
