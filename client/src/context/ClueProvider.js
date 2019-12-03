@@ -152,7 +152,8 @@ class ClueProvider extends Component {
             needTutorial: true,
             canQuestion: false,
             hideClues: [false, false, false, false, false, false, false, false, false, false, false],
-            showCharAlibi: [false, false, false, false, false, false]
+            showCharAlibi: [false, false, false, false, false, false],
+            attempts: 3
         })
         this.getAll()
         
