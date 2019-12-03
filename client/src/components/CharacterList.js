@@ -8,7 +8,7 @@ import {withClue} from '../context/ClueProvider'
 const CharacterList = props => {
    
    
-    const mappedCharacter = props.characters.map((character) => <Character {...character} key={character._id} />)
+    const mappedCharacter = props.characters.map((character, i) => <Character {...character} history={props.history} key={character._id} index={i} />)
 
     return(
         <div className="characterContainer">
