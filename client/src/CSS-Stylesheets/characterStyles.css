@@ -22,7 +22,7 @@
 .charCards {
     width: 250px;
     text-align: center;
-    background-color: antiquewhite;
+    background-color: rgba(250, 235, 215, 0.788);
     padding: 15px 20px;
     border-radius: 10px;
 }
