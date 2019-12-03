@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { withClue } from '../context/ClueProvider'
+// import ding from '../sounds/Ding.mp3'
 
 
 class Game extends Component {
@@ -28,6 +29,8 @@ class Game extends Component {
         const currentArr = this.state.openClues
         const isOpen = !this.state.openClues[clueNum]
         currentArr.splice(clueNum, 1, isOpen)
+        // const themeDing = new Audio(ding)
+        // themeDing.play()
         this.setState(() => ({
             openClues: currentArr
         }))
@@ -67,7 +70,7 @@ class Game extends Component {
                         this.state.tutorial === 'tutorial' 
                         ?
                         <div className='gameTutorial'>
-                            <p className='gameTutorialText'>{`Welcome to Clue: Murder Mystery, ${this.props.title} ${this.props.name}! A murder has happened at Tudor Manor, and it is your job to solve it. Search the murder scene for hidden clues (click around the Game page). To eliminate suspects, interview them on the Characters page after finding clues that implicate them and see if they have an alibi for the murder. The murderer kept the weapon, so you know if you find a weapon it can’t be the murder weapon. Check the Weapons page to see which weapons you’ve found. Once you’re ready to guess who the murder and weapon are, go to Make Accusation and guess! You get three guesses before the murderer takes you out! Don’t take too long to guess, or the murderer will kill you before you can accuse them!`}</p>
+                            <p className='gameTutorialText'>{`Welcome to Clue: Murder Mystery, ${this.props.title} ${this.props.name}! A murder has happened at Tudor Manor, and it is your job to solve it. Search the murder scene for hidden clues (scroll and click around the Game page). To eliminate suspects, interview them on the Characters page after finding clues that implicate them and see if they have an alibi for the murder. The murderer kept the weapon, so you know if you find a weapon it can’t be the murder weapon. Check the Weapons page to see which weapons you’ve found. Once you’re ready to guess who the murder and weapon are, go to Make Accusation and guess! You get three guesses before the murderer takes you out! Don’t take too long to guess, or the murderer will kill you before you can accuse them!`}</p>
                             <button onClick={this.handleTutorialToggle} value='play' className='gameTutorialButton'>Play</button>
                         </div>
                         :

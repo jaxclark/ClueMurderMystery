@@ -7,7 +7,7 @@ class LandingPage extends Component {
         super(props)
         this.state = {
             name: '',
-            title: 'sleuth'
+            title: 'Sleuth'
         }
     }
 

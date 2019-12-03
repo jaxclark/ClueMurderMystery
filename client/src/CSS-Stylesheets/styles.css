@@ -75,7 +75,7 @@
 .landingForm {
     margin: 40vh auto 0px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.685);
+    background-color: rgba(250, 235, 215, 0.788);
     padding: 25px;
     width: 550px;   
     box-shadow: rgb(75, 74, 74) 3px 3px 7px;
@@ -159,7 +159,7 @@
 
 @media screen and (min-width: 1100px) {
     .landingForm {
-        margin: 43vh auto 10px;
+        margin: 40vh auto 10px;
         font-size: 16px;
         padding: 15px;
     }
