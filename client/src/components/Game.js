@@ -84,7 +84,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue1B' style={this.props.hideClues[0] ? {display: 'none'} : {}} className='gameClueDivHIDE-1' onClick={() => this.handleClueToggle(0)}>
-                                <div>HIDE INFO 1</div>
+                                <div></div> 
+                                {/* HIDE INFO 1 */}
                             </div>   
                         }
                         {
@@ -96,7 +97,8 @@ class Game extends Component {
                             </div>
                             : 
                             <div id='clue2B' style={this.props.hideClues[1] ? {display: 'none'} : {}} className='gameClueDivHIDE-2' onClick={() => this.handleClueToggle(1)}>
-                                <div>HIDE INFO 2</div>
+                                <div></div>
+                                {/* HIDE INFO 2 */}
                             </div>
                         }
                         {this.state.openClues[2] ? 
@@ -108,7 +110,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue3B' style={this.props.hideClues[2] ? {display: 'none'} : {}} className='gameClueDivHIDE-3' onClick={() => this.handleClueToggle(2)}>
-                                <div>HIDE INFO 3</div>
+                                <div></div>
+                                {/* HIDE INFO 3 */}
                             </div>   
                         }
                         {this.state.openClues[3] ? 
@@ -119,7 +122,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue4B' style={this.props.hideClues[3] ? {display: 'none'} : {}} className='gameClueDivHIDE-4' onClick={() => this.handleClueToggle(3)}>
-                                <div>HIDE INFO 4</div>
+                                <div></div>
+                                {/* HIDE INFO 4 */}
                             </div>   
                         }
                         {this.state.openClues[4] ? 
@@ -130,7 +134,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue5B' style={this.props.hideClues[4] ? {display: 'none'} : {}} className='gameClueDivHIDE-5' onClick={() => this.handleClueToggle(4)}>
-                                <div>HIDE INFO 5</div>
+                                <div></div>
+                                {/* HIDE INFO 5 */}
                             </div>   
                         }
                         {this.state.openClues[5] ? 
@@ -141,7 +146,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue6B' style={this.props.hideClues[5] ? {display: 'none'} : {}} className='gameClueDivHIDE-6' onClick={() => this.handleClueToggle(5)}>
-                                <div>HIDE INFO 6</div>
+                                <div></div>
+                                {/* HIDE INFO 6 */}
                             </div>   
                         }
                         {this.state.openClues[6] ?
@@ -152,7 +158,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue7B' style={this.props.hideClues[6] ? {display: 'none'} : {}} className='gameClueDivHIDE-7' onClick={() => this.handleClueToggle(6)}>
-                                <div>HIDE INFO 7</div>
+                                <div></div>
+                                {/* HIDE INFO 7 */}
                             </div>   
                         }
                         {this.state.openClues[7] ? 
@@ -163,7 +170,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue8B' style={this.props.hideClues[7] ? {display: 'none'} : {}} className='gameClueDivHIDE-8' onClick={() => this.handleClueToggle(7)}>
-                                <div>HIDE INFO 8</div>
+                                <div></div>
+                                {/* HIDE INFO 8 */}
                             </div>   
                         }
                         {this.state.openClues[8] ? 
@@ -174,7 +182,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue9B' style={this.props.hideClues[8] ? {display: 'none'} : {}} className='gameClueDivHIDE-9' onClick={() => this.handleClueToggle(8)}>
-                                <div>HIDE INFO 9</div>
+                                <div></div>
+                                {/* HIDE INFO 9 */}
                             </div>   
                         }
                         {this.state.openClues[9] ? 
@@ -185,7 +194,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue10B' style={this.props.hideClues[9] ? {display: 'none'} : {}} className='gameClueDivHIDE-10' onClick={() => this.handleClueToggle(9)}>
-                                <div>HIDE INFO 10</div>
+                                <div></div>
+                                {/* HIDE INFO 10 */}
                             </div>   
                         }
                         {this.state.openClues[10] ? 
@@ -196,7 +206,8 @@ class Game extends Component {
                             </div>
                             :
                             <div id='clue11B' style={this.props.hideClues[10] ? {display: 'none'} : {}} className='gameClueDivHIDE-11' onClick={() => this.handleClueToggle(10)}>
-                                <div>HIDE INFO 11</div>
+                                <div></div>
+                                {/* HIDE INFO 11 */}
                             </div>   
                         }
                     </div>
