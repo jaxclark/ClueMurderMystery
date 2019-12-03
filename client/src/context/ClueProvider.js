@@ -23,6 +23,7 @@ class ClueProvider extends Component {
             needTutorial: true,
             canQuestion: false,
             hideClues: [false, false, false, false, false, false, false, false, false, false, false],
+            showCharAlibi: [false, false, false, false, false, false]
         }
     }
 
@@ -179,6 +180,17 @@ class ClueProvider extends Component {
             hideClues: currentArr
         }))
     }
+
+    handleShowCharAlibi = (index) => {
+        const currentArr = this.state.showCharAlibi
+
+        const changeTo = !this.state.showCharAlibi[index]
+        currentArr.splice(index, 1, changeTo)
+
+        this.setState({
+            showCharAlibi: currentArr
+        })
+    }
     
     render() {
         console.log(this.state.clickedCount)
@@ -196,6 +208,7 @@ class ClueProvider extends Component {
                     updateClickCount: this.updateClickCount,
                     handleTutorial: this.handleTutorial,
                     handleHideClues: this.handleHideClues,
+                    handleShowCharAlibi: this.handleShowCharAlibi
                 }}>
                 {this.props.children}
             </ClueContext.Provider>

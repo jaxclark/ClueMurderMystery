@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import {withClue} from '../context/ClueProvider';
-import Logo from '../images/MM.png'
+// import Logo from '../images/MM.png'
 import LogoWide from '../images/MM-wide.png'
 
 import song from '../sounds/dark-winter.mp3'

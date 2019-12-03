@@ -15,7 +15,7 @@ class Character extends Component {
         let filtered = this.props.foundClues.filter(ind => {
             return ind.character === this.props.name
         }) 
-        {filtered[0]
+        filtered[0]
         ?
         this.setState({
            canQuestion: true
@@ -23,21 +23,24 @@ class Character extends Component {
          :
         this.setState({
             canQuestion: false
-        })}
+        })
 
         
     }
     question = () => {
+        this.props.updateClickCount()
         this.setState({
             showAlibi: true
         })
-        this.props.updateClickCount()
+        
         if(this.props.dead === true){
             this.props.history.push('/gameOver')
         }
        
-       
+       //change index in context showCharAlibi
+       this.props.handleShowCharAlibi(this.props.index)
     }
+    
 
 
  render() {
@@ -89,10 +92,10 @@ class Character extends Component {
 
                         <div className="questionSus">
                             {
-                                this.props.showAlibi || this.state.showAlibi
+                                this.props.showAlibi || this.props.showCharAlibi[this.props.index]
                                 ?
                                 
-                                    name !== killer
+                                    name !== killer.name
                                     ?
                                     <h5>{this.props.alibiTxt}</h5>
                                     :
