@@ -47,6 +47,7 @@
     /* height: 101vh; */
     width: 100vw;
     margin: 0px;
+    padding-bottom: 200px;
 }
 .logo {
     height: 35px;
@@ -128,6 +129,14 @@
     font-family: Roboto;
     font-size: 16px;
     margin: 10px 20px;
+}
+
+.particles canvas {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 @media screen and (min-width: 800px) {
