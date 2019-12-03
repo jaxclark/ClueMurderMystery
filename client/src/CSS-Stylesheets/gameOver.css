@@ -62,22 +62,34 @@
     height: 100%;
 }
 
-
-
 .tracking-in-expand {
 	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    margin-top: 150px;
+    margin-top: 70px;
     text-align: center;
     /* animation-name: lostMessage; */
     /* animation-duration: 4s; */
-    color: #d1ab10;
-    padding-top: 50px;
+    color: #c8102e;
+    padding-top: 80px;
     font-size: 60px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);    
     font-family: Montserrat;
 }
- @-webkit-keyframes tracking-in-expand {
+.tracking-in-expand2 {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    margin-top: 20px;
+    text-align: center;
+    /* animation-name: lostMessage; */
+    /* animation-duration: 4s; */
+    color: #d1ab10;
+    padding: 50px;
+    font-size: 35px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);    
+    font-family: Montserrat;
+    line-height: 1.4;
+}
+@-webkit-keyframes tracking-in-expand {
     0% {
       letter-spacing: -0.5em;
       opacity: 0;
@@ -88,17 +100,27 @@
     100% {
       opacity: 1;
     }
-  }
-  @keyframes tracking-in-expand {
+}
+@keyframes tracking-in-expand {
     0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
+        letter-spacing: -0.5em;
+        opacity: 0;
     }
     40% {
-      opacity: 0.6;
+        opacity: 0.6;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
+    }
+  
+@media screen and (min-width: 800px) {
+    .tracking-in-expand {
+        font-size: 80px;
   }
+    .tracking-in-expand2 {
+        font-size: 45px;
+}
+}
+
   

@@ -11,7 +11,8 @@ class GameWon extends Component {
     render() {
         return (
             <div className='gameOver'>
-                <h1 className='tracking-in-expand'>{`Congratulations ${this.props.title} ${this.props.name}! \nYou have solved the murder and won the game!`}</h1>
+                <h1 className='tracking-in-expand'>{`Congratulations ${this.props.title} ${this.props.name}!`}</h1>
+                <h1 className='tracking-in-expand2'>You have solved the murder and won the game!</h1>
                 <Confetti className='wonConfetti'/>
                 <button className='restartBtn' onClick={this.handleClick}>
                 Play Again</button>
