@@ -16,7 +16,7 @@ class Game extends Component {
     }
 
     handleTutorialToggle = e => {
-        this.props.popWeaponFromClues()
+        
         if(e.target.value === 'tutorial'){
             this.setState({tutorial: 'tutorial'})
         } else {

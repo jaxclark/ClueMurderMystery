@@ -1,7 +1,10 @@
 import React from 'react'
 import Weapon from './Weapon'
 import {withClue} from '../context/ClueProvider'
-import Particles from './Particle'
+import Particles from 'react-particles-js'
+import particlesJSON from '../particlesjs-config.json'
+
+const particlesVar = particlesJSON
 
 const WeaponList = props => {
    
@@ -12,8 +15,10 @@ const WeaponList = props => {
              
             <div className="weaponContainer">
                 {mappedWeapon}
-            </div>    
-           <Particles />
+            </div>
+            <div className='particles'>
+                <Particles params={particlesVar} />
+            </div>
         </div>
     )
 }

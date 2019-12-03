@@ -25,6 +25,7 @@
     background-color: rgba(250, 235, 215, 0.788);
     padding: 15px 20px;
     border-radius: 10px;
+    margin: auto;
 }
 .charCardImage {
     width: 225px;
@@ -108,6 +109,9 @@ p {
 @media screen and (min-width: 1200px) {
     .characterContainer {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 100vh;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
     .charCards {
         width: 150px;
