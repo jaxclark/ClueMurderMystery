@@ -23,11 +23,16 @@ class ClueProvider extends Component {
             needTutorial: true,
             canQuestion: false,
             hideClues: [false, false, false, false, false, false, false, false, false, false, false],
-            showCharAlibi: [false, false, false, false, false, false]
+            showCharAlibi: [false, false, false, false, false, false],
+            attempts: 3
         }
     }
 
-    
+    tries = () => {
+        this.setState(prevState => ({
+            attempts: prevState.attempts -= 1
+        }))
+    }
     getAll = () => {
     
         axios.get('/weapon')
@@ -45,7 +50,15 @@ class ClueProvider extends Component {
                 this.setState({
                     clues:res.data
                 })
+                let newClues = this.state.clues
+                .map((a) => ({sort: Math.random(), value: a}))
+                .sort((a, b) => a.sort - b.sort)
+                .map((a) => a.value)
+                this.setState({
+                    clues:newClues
+                })
             })
+            
             .catch(err => console.log(err))
         
         axios.get('/character')
@@ -65,6 +78,7 @@ class ClueProvider extends Component {
         })
     }
 
+
     chooseKiller = () => {
         const killerIndex = Math.floor(Math.random()*(this.state.characters.length))
         console.log(killerIndex)
@@ -77,6 +91,8 @@ class ClueProvider extends Component {
         const newClues = this.state.clues.filter(weapon => (weapon.name !== this.state.murderWeapon.name))
         this.setState({clues: newClues})
     }
+
+    
 
     // function so player can set their title and name
     chooseName = (name, title) => {
@@ -130,7 +146,9 @@ class ClueProvider extends Component {
             accuseCount: 2,
             lostCount: false,
             needTutorial: true,
+            canQuestion: false,
             hideClues: [false, false, false, false, false, false, false, false, false, false, false],
+            showCharAlibi: [false, false, false, false, false, false]
         })
         this.getAll()
         
@@ -208,7 +226,8 @@ class ClueProvider extends Component {
                     updateClickCount: this.updateClickCount,
                     handleTutorial: this.handleTutorial,
                     handleHideClues: this.handleHideClues,
-                    handleShowCharAlibi: this.handleShowCharAlibi
+                    handleShowCharAlibi: this.handleShowCharAlibi,
+                    tries: this.tries
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
