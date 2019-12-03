@@ -23,7 +23,7 @@ class GameOver extends Component {
                 <h1 className='lostMessage'>You looked at too many clues.</h1>
             </div>
             }
-            <button className='restartBtn' onClick={this.handleClick} style ={{border: '1px solid black'}} >
+            <button className='restartBtn' onClick={this.handleClick} >
               Play Again</button>
         </div>
     )

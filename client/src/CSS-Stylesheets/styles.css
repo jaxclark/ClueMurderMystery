@@ -47,7 +47,7 @@
     /* height: 101vh; */
     width: 100vw;
     margin: 0px;
-    padding-bottom: 200px;
+    /* padding-bottom: 200px; */
 }
 .logo {
     height: 35px;
@@ -150,13 +150,14 @@
     .landingDivImage {
         position: absolute;
         top: 0px;
-        height: 101%;
-        width: 100vw;
+        height: 106%;
+        width: 100%;
     }
     .landingForm {
         margin: 38vh auto 10px;
         font-size: 16px;
         padding: 15px;
+        top: 0;
     }
     .startGameButton {
         background-color: #c8102e;
@@ -167,9 +168,22 @@
 }
 
 @media screen and (min-width: 1100px) {
-    .landingForm {
-        margin: 40vh auto 10px;
+    .landingForm {    
+        margin: 45vh auto 10px;
         font-size: 16px;
         padding: 15px;
+    }
+    .landingDivImage {
+        background: url("../images/HouseLanding-top.jpg") no-repeat top 40% center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-color: grey;
+        position: absolute;
+        top: 0px;
+        height: 101vh;
+        width: 100vw;
+        margin: 0px;
     }
 }
