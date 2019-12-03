@@ -77,7 +77,10 @@
     position: absolute;
     top: 315px;
     left: 2065px;
-    background-color: red;
+}
+.gameClueDivHIDE-1:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
 }
 .gameClueDivSHOW-2 {
     height: auto;
@@ -95,14 +98,13 @@
     width: 100px;
     position: absolute;
     top: 575px;
-    left: 365px;
-    /* background-color: rgba(255, 255, 255, 0.171); */
+    left: 365px;    
+}
+.gameClueDivHIDE-2:hover {
     border-radius: 50%;
     background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
-
-
-
 }
+
 .gameClueDivSHOW-3 {
     height: auto;
     width: 175px;
@@ -120,8 +122,10 @@
     position: absolute;
     top: 850px;
     left: 350px;
-    background-color: red;
-
+}
+.gameClueDivHIDE-3:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
 }
 .gameClueDivSHOW-4 {
     height: auto;
@@ -135,13 +139,15 @@
     box-shadow: #666 5px 5px 7px;
 }
 .gameClueDivHIDE-4 {
-    height: 175px;
+    height: 100px;
     width: 100px;
     position: absolute;
     top: 600px;
     left: 745px;
-    background-color: red;
-
+}
+.gameClueDivHIDE-4:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
 }
 .gameClueDivSHOW-5 {
     height: auto;
@@ -156,12 +162,14 @@
 }
 .gameClueDivHIDE-5 {
     height: 100px;
-    width: 200px;
+    width: 150px;
     position: absolute;
     top: 600px;
     left: 500px;
-    background-color: red;
-
+}
+.gameClueDivHIDE-5:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 60%);
 }
 .gameClueDivSHOW-6 {
     height: auto;
@@ -175,13 +183,15 @@
     box-shadow: #666 5px 5px 7px;
 }
 .gameClueDivHIDE-6 {
-    height: 300px;
+    height: 120px;
     width: 120px;
     position: absolute;
-    top: 450px;
-    left: 865px;
-    background-color: red;
-
+    top: 555px;
+    left: 850px;
+}
+.gameClueDivHIDE-6:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.253) 20%, rgba(245, 232, 161, 0) 65%);
 }
 .gameClueDivSHOW-7 {
     height: auto;
@@ -200,8 +210,10 @@
     position: absolute;
     top: 640px;
     left: 1180px;
-    background-color: red;
-
+}
+.gameClueDivHIDE-7:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
 }
 .gameClueDivSHOW-8 {
     height: auto;
@@ -220,8 +232,10 @@
     position: absolute;
     top: 880px;
     left: 1165px;
-    background-color: red;
-
+}
+.gameClueDivHIDE-8:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
 }
 .gameClueDivSHOW-9 {
     height: auto;
@@ -235,13 +249,15 @@
     box-shadow: #666 5px 5px 7px;
 }
 .gameClueDivHIDE-9 {
-    height: 70px;
-    width: 170px;
+    height: 100px;
+    width: 100px;
     position: absolute;
-    top: 805px;
-    left: 2000px;
-    background-color: red;
-
+    top: 790px;
+    left: 2030px;
+}
+.gameClueDivHIDE-9:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
 }
 .gameClueDivSHOW-10 {
     height: auto;
@@ -255,13 +271,15 @@
     box-shadow: #666 5px 5px 7px;
 }
 .gameClueDivHIDE-10 {
-    height: 200px;
+    height: 120px;
     width: 90px;
     position: absolute;
     top: 580px;
     left: 1500px;
-    background-color: red;
-
+}
+.gameClueDivHIDE-10:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
 }
 .gameClueDivSHOW-11 {
     height: auto;
@@ -280,8 +298,10 @@
     position: absolute;
     top: 80px;
     left: 1165px;
-    background-color: red;
-
+}
+.gameClueDivHIDE-11:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
 }
 .gameClueTitle {
     font-family: Roboto;
