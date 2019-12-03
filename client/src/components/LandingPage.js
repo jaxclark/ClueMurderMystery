@@ -7,23 +7,24 @@ class LandingPage extends Component {
         super(props)
         this.state = {
             name: '',
-            title: ''
+            title: 'sleuth'
         }
     }
 
-    handleSubmit = (e, name, title) => {
-        e.preventDefault()
-        this.props.chooseName(name, title)
-        alert('Welcome to the game!')
-    }
+    // handleSubmit = (e, name, title) => {
+    //     e.preventDefault()
+    //     this.props.chooseName(name, title)
+    //     alert('Welcome to the game!')
+    // }
 
     handleChange = e => {
         const { name, value } = e.target
         this.setState({[name]: value})
     }
-    handleClick = e => {
+    handleClick = (e) => {
         e.preventDefault()
         this.props.getAll()
+        this.props.chooseName(this.state.name, this.state.title)
         this.props.history.push('/game')
     }
         //route to main page of game, call getAll function
@@ -33,7 +34,8 @@ class LandingPage extends Component {
         return(
         <div className='landingDivImage'>
             <div className='landingDiv'>
-                <form onSubmit={(e) => this.handleSubmit(e, this.state.name, this.state.title)} className='landingForm'> 
+                {/* <form onSubmit={(e) => this.handleSubmit(e, this.state.name, this.state.title)} className='landingForm'>  */}
+                <form className='landingForm'> 
                     <h1 className='landingWelcome'>Welcome to Tudor Manor</h1>
                     <p className='landingWelcomeExplanation'>Set up your player character and help us find the murderer:</p>
                     <select onChange={this.handleChange} name='title' id="title" className='landingTitle'>
@@ -48,11 +50,12 @@ class LandingPage extends Component {
                         <option value='Inspector' >Inspector</option>
                     </select>
                     <input onChange={this.handleChange} value={this.state.name} name='name' type="text" placeholder="Name"className='landingTitleInput' />
-                    <button className='landingTitleSubmit' >Submit</button>
-                </form>
-                <div className='startGameButtonDiv'>
+                    {/* <button className='landingTitleSubmit' >Submit</button> */}
                     <button onClick={this.handleClick} className='startGameButton'>Start Game</button>
-                </div>
+                </form>
+                {/* <div className='startGameButtonDiv'>
+                    <button onClick={this.handleClick} className='startGameButton'>Start Game</button>
+                </div> */}
             </div>
          </div>
         )
