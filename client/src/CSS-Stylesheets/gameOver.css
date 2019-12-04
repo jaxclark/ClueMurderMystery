@@ -1,7 +1,15 @@
 html {
-    background-color: #101;
+
     height: 100%;
     width: 100%;
+}
+@font-face {
+    font-family: 'bloodlust';
+    src: local('bloodlust'), url(../fonts/bloodlust.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'BLOODY';
+    src: local('BLOODY'), url(../fonts/BLOODY.TTF) format('truetype');
 }
 @font-face {
     font-family: 'ExquisiteCorpse';
@@ -19,6 +27,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
+    padding-bottom: 50px;
 }
 .wrongGuessDiv {
     height: 100%;
@@ -31,17 +40,17 @@ html {
     text-align: center;
 }
 .lostHeader {
-    font-family:'ExquisiteCorpse', Jokerman, Marker Felt;
-    font-color:white;
+    font-family:'BLOODY', 'bloodlust', 'ExquisiteCorpse', Jokerman, Marker Felt;
+    letter-spacing: 2px;
+    color:white;
     margin:100px auto;
-    width:60%;
-    font-size:7em;
+    width:100%;
+    font-size:120px;
     transition:all 3s ease-in-out;
       -webkit-transition:all 3s ease-in-out;
       -moz-transition:all 3s ease-in-out;
     -o-transition:all 15s ease-in-out;
     color:white;
-    text-shadow: 0px 0px 5px #888;
     padding-top: 200px;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -58,7 +67,7 @@ html {
     text-align: center;
     font-size: 40px;
     width: 50%;
-    margin: 100px auto;
+    margin: 60px auto;
     color: white;
     line-height: 1.5;
 }
