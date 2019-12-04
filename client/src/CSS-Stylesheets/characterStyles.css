@@ -10,10 +10,13 @@
     padding-bottom: 100px;
     background-color: #165d30ed;
     border: none;
+    height: 100%;
+    min-height: 100vh;
 }
 .character {
     margin-top: 40px;
     border: none;
+    padding-bottom: 40px;
 }
 .character>img {
     margin: auto;
@@ -109,7 +112,6 @@ p {
 @media screen and (min-width: 1200px) {
     .characterContainer {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        height: 100vh;
         margin-bottom: 0;
         padding-bottom: 0;
     }
