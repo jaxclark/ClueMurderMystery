@@ -26,6 +26,7 @@ class LandingPage extends Component {
         this.props.getAll()
         this.props.chooseName(this.state.name, this.state.title)
         this.props.history.push('/game')
+        this.props.sound()
     }
         //route to main page of game, call getAll function
 
