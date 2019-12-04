@@ -25,7 +25,7 @@ class Accusation extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         if (this.state.murderer === '' || this.state.weapon === '') {
-            (alert("You must select a murderer and a weapon to proceed"))
+            (alert("You must select a murderer and a weapon"))
         } else if (this.state.murderer === this.props.killer.name && this.state.weapon === this.props.murderWeapon.name) {
             this.props.history.push('/gameWon')
         } else {
@@ -34,7 +34,7 @@ class Accusation extends Component {
                 this.props.history.push('/gameOver')
             
             } else {
-                alert("Your guess was incorrect!!!")
+                alert("You accused the wrong person, try again")
                 this.props.tries()
             this.props.guess(this.state.murderer, this.state.weapon)
             } 

@@ -92,9 +92,9 @@ html {
     /* animation-duration: 4s; */
     color: #d1ab10;
     padding-top: 50px;
-    font-size: 60px;
+    font-size: 80px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);    
-    font-family: Montserrat;
+    font-family: Marker Felt, Georgia, 'Times New Roman', Times, serif;
 
 }
 .wonConfetti {
@@ -109,10 +109,10 @@ html {
     /* animation-name: lostMessage; */
     /* animation-duration: 4s; */
     color: #c8102e;
-    padding-top: 80px;
-    font-size: 60px;
+    padding-top: 90px;
+    font-size: 80px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);    
-    font-family: Montserrat;
+    font-family: Marker Felt, Georgia, 'Times New Roman', Times, serif;
 }
 .tracking-in-expand2 {
 	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -125,7 +125,7 @@ html {
     padding: 50px;
     font-size: 35px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);    
-    font-family: Montserrat;
+    font-family: Marker Felt, Georgia, 'Times New Roman', Times, serif;
     line-height: 1.4;
 }
 @-webkit-keyframes tracking-in-expand {
@@ -155,7 +155,7 @@ html {
   
 @media screen and (min-width: 800px) {
     .tracking-in-expand {
-        font-size: 80px;
+        font-size: 100px;
     }
     .tracking-in-expand2 {
         font-size: 45px;
