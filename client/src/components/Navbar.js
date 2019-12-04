@@ -11,9 +11,13 @@ class Navbar extends Component {
     //     super()
     // }
 
-    componentDidMount(){
+    componentDidUpdate(){
         const themeSong = new Audio(song)
-        themeSong.play()
+        if(this.props.canPlay) {
+           themeSong.play() 
+           this.props.stopPlay()
+        }
+        
 }
     render() {
 

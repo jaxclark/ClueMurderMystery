@@ -24,10 +24,22 @@ class ClueProvider extends Component {
             canQuestion: false,
             hideClues: [false, false, false, false, false, false, false, false, false, false, false],
             showCharAlibi: [false, false, false, false, false, false],
-            attempts: 3
+            attempts: 3,
+            canPlay: false
         }
     }
 
+    sound = () => {
+        this.setState({
+            canPlay: true
+        })
+    }
+
+    stopPlay = () => {
+        this.setState ({
+            canPlay: false
+        })
+    }
     tries = () => {
         this.setState(prevState => ({
             attempts: prevState.attempts -= 1
@@ -153,7 +165,8 @@ class ClueProvider extends Component {
             canQuestion: false,
             hideClues: [false, false, false, false, false, false, false, false, false, false, false],
             showCharAlibi: [false, false, false, false, false, false],
-            attempts: 3
+            attempts: 3,
+            canPlay: false
         })
         this.getAll()
         
@@ -231,7 +244,9 @@ class ClueProvider extends Component {
                     handleTutorial: this.handleTutorial,
                     handleHideClues: this.handleHideClues,
                     handleShowCharAlibi: this.handleShowCharAlibi,
-                    tries: this.tries
+                    tries: this.tries,
+                    sound: this.sound,
+                    stopPlay: this.stopPlay
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
