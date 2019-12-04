@@ -26,7 +26,7 @@
     font-size: 25px;
     font-weight: 600;
     text-align: center;
-    margin: 25px 0px 15px 0px;
+    margin: 40px 0px 15px 0px;
     color: whitesmoke;
     background-color: black;
     width: 100%;
@@ -41,22 +41,22 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
     row-gap: 30px;
-    padding: 15px;
+    padding: 15px 15px 30px 15px;
 }
 .accuseBtnDiv {
     text-align: center;
 }
 .accuseBtn {
     border: 1px solid black;
-    border-radius: 20px;
-    margin: 30px auto 10px auto;
-    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 40px auto 10px auto;
+    padding: 16px 24px;
     background-color: #c8102e;
     box-shadow: #60061e 5px -5px 25px inset;
     box-shadow: #101 1px 1px 10px;
     font-family: Roboto;
     color: whitesmoke;
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 1px;
     outline-color: #c8102e;
 }
