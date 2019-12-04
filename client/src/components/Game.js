@@ -70,7 +70,12 @@ class Game extends Component {
                         this.state.tutorial === 'tutorial' 
                         ?
                         <div className='gameTutorial'>
-                            <p className='gameTutorialText'>{`Welcome to Clue: Murder Mystery, ${this.props.title} ${this.props.name}! A murder has happened at Tudor Manor, and it is your job to solve it. Search the murder scene for hidden clues (scroll and click around the Game page). To eliminate suspects, interview them on the Characters page after finding clues that implicate them and see if they have an alibi for the murder. The murderer kept the weapon, so you know if you find a weapon it can’t be the murder weapon. Check the Weapons page to see which weapons you’ve found. Once you’re ready to guess who the murder and weapon are, go to Make Accusation and guess! You get three guesses before the murderer takes you out! Don’t take too long to guess, or the murderer will kill you before you can accuse them!`}</p>
+                            <p className='gameTutorialName'>{`Welcome to Clue: Murder Mystery, ${this.props.title} ${this.props.name}!`}</p>
+                            <p className='gameTutorialText'>• Scroll <b>up, down</b> and <b>side to side</b> and click around the Game page to find hidden clues</p>
+                            <p className='gameTutorialText'>• Interview suspects on the Characters page to eliminate them after finding their clues</p>
+                            <p className='gameTutorialText'>• Found weapons are not the murder weapon and  will show on the Weapons page</p>
+                            <p className='gameTutorialText'>• You get three chances to guess the murderer and weapon on the Accusation page</p>
+                            <p className='gameTutorialText'>• If you take too long to guess the murderer will kill you</p>
                             <button onClick={this.handleTutorialToggle} value='play' className='gameTutorialButton'>Play</button>
                         </div>
                         :
