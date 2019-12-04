@@ -332,14 +332,13 @@
     padding: 8px 10PX;
     border-radius: 5px;
     margin: 5px auto;
-    background: maroon;
+    background: #c8102e;
     font-size: 12px;
     color: whitesmoke;
 }
 .hidden {
     display: none;
 }
-
 
 @media screen and (min-width: 800px) {
     .gameDiv {
@@ -487,5 +486,28 @@
     .gameClueDescription {
         margin: 5px auto;
         font-size: 15px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .gameTutorialHeader {
+        font-size: 32px;
+    }
+    .gameTutorialButton {
+        margin-bottom: 40px;
+    }
+    .gameTutorialText {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    .gameClueTitle {
+        font-size: 18px;
+    }
+    .gameClueDescription {
+        padding: 5px;
+        font-size: 14px;
+    }
+    .gameAddClueButton {
+        padding: 8px 10px;
+        font-size: 14px;
     }
 }
